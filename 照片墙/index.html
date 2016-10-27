@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>照片墙</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        #btn {
+            display: block;
+            width:120px;
+            margin:20px auto;
+        }
+        .wrap {
+            width: 650px;
+            height: 486px;
+            padding: 20px;
+            margin: 10px auto;
+            border: 1px dashed #00ff00;
+            border-radius: 10px;
+        }
+        #photoWall {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+
+        }
+        .clearFix:after{
+            content:'';
+            height:0;
+            clear:both;
+            display:block;
+            visibility:hidden;
+        }
+        #photoWall li {
+            float: left;
+            margin: 5px;
+            border: 1px dashed #2e2e2e;
+            /*border-radius: 10px;*/
+            border-radius: 50%;
+            /*background: #10f7ef;*/
+        }
+        #photoWall li img {
+            display: block;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            vertical-align: bottom;
+        }
+        #photoWall .active {
+            border: 1px dashed #f00;
+        }
+    </style>
+    <script src="js/MTween3.js"></script>
+    <script>
+        window.onload = function () {
+            //需求：1.布局转换，元素之间布局转换，把当前的浮动布局转成定位
+            // 2.拖拽用到的事件，onmousedown，onmousemove，onmouseup事件
+            // 3.碰撞的判断
+            // 4.随机排序
+            var photoWall = document.getElementById('photoWall');
+            var btn = document.getElementById('btn');
+            var oli = photoWall.getElementsByTagName('li');
+            var siteArr = [];//用来保存所有li对应的left和top值
+            var arr = [];//用来
+            var len = oli.length;
+            var z = 1;
+            for(var i = 0; i < len; i++){
+                siteArr.push({
+                    'left':oli[i].offsetLeft,
+                    'top':oli[i].offsetTop
+                })
+            }
+            for(var i = 0; i < len; i++ ){
+                //元素绝对定位,实现布局转换
+                oli[i].style.position = 'absolute';
+                oli[i].style.left = siteArr[i].left + 'px';
+                oli[i].style.top = siteArr[i].top + 'px';
+                oli[i].style.margin = 0;
+            }
+            for(var i = 0; i < len; i++){
+                oli[i].index = i;
+                drag(oli[i]);
+                arr.push(i)
+
+            }
+            //点击随机排序
+            btn.onclick = function () {
+                arr.sort(function (a,b) {
+                    return Math.random() - 0.5
+                });
+                for(var i=0; i<len; i++){
+                    if(oli[i].timer){
+                        return;
+                    }
+                    MTween(oli[i],{
+                        left:siteArr[arr[i]].left,
+                        top:siteArr[arr[i]].top
+                    },500);
+                    oli[i].index = arr[i];
+                }
+            };
+            //拖拽函数
+            function drag(obj){
+                var disX = 0;
+                var disY = 0;
+                obj.onmousedown = function (ev) {
+                    var ev = ev || window.event;//处理兼容
+                    disX = ev.clientX - obj.offsetLeft;
+                    disY = ev.clientY - obj.offsetTop;
+                    obj.style.zIndex = z++;
+                    document.onmousemove = function (ev) {
+                        var ev = ev||window.event;//处理兼容
+                        obj.style.left = ev.clientX - disX + 'px';
+                        obj.style.top = ev.clientY - disY + 'px';
+                        for(var i = 0; i < len; i++){
+                            oli[i].className = '';
+                        }
+                        var nearLi = nearest(obj);
+                        if(nearLi){
+                            nearLi.className ='active';
+                        }
+                    };
+                    document.onmouseup = function () {
+                        document.onmousemove = document.onmouseup = null;
+                        console.log(obj.index);
+                        var nearLi = nearest(obj);
+                        if(nearLi){
+                            MTween(nearLi,{
+                                left:siteArr[obj.index].left,
+                                top:siteArr[obj.index].top
+                            },500);
+                            MTween(obj,{
+                                left:siteArr[nearLi.index].left,
+                                top:siteArr[nearLi.index].top
+                            },500);
+                            nearLi.className = '';
+                            [nearLi.index,obj.index] = [obj.index,nearLi.index]
+                        }else{
+                            MTween(obj,{
+                                top:siteArr[obj.index].top,
+                                left:siteArr[obj.index].left
+                            },500)
+                        }
+                    };
+                    return false;//阻止事件的默认行为
+                }
+            }
+            //碰撞检测函数
+            function collied(obj1,obj2){
+                //obj1 移动的元素 obj2倍碰撞的元素
+                //返回值：true  未碰  false 已碰
+                var t1 = obj1.getBoundingClientRect().top;
+                var r1 = obj1.getBoundingClientRect().right;
+                var b1 = obj1.getBoundingClientRect().bottom;
+                var l1 = obj1.getBoundingClientRect().left;
+                var t2 = obj2.getBoundingClientRect().top;
+                var r2 = obj2.getBoundingClientRect().right;
+                var b2 = obj2.getBoundingClientRect().bottom;
+                var l2 = obj2.getBoundingClientRect().left;
+                if(b2<t1 || l2>r1 || r2<l1 || t2>b1){
+                    return false;
+                }else{
+                    return true;
+                }
+            }
+            //寻找最近的元素
+            function nearest(obj){
+                var index = -1;
+                var value = Infinity;
+                for(var i = 0; i < len; i++){
+                    if(collied(obj,oli[i]) && obj != oli[i]){
+                        //检测碰撞的元素但不包括本身
+                        var num = getDis(obj,oli[i]);
+                        if( num <　value){
+                            value = num;
+                            index = i ;//记录当前下标
+                        }
+                    }
+                }
+                if(index != -1){
+                    return oli[index];
+                }else{
+                    return false
+                }
+            }
+            //获取两个元素距离的函数
+            function getDis(obj1,obj2){
+                var x = obj1.offsetLeft - obj2.offsetLeft;
+                var y = obj1.offsetTop - obj2.offsetTop;
+                return Math.sqrt(x*x + y*y)
+            }
+        }
+    </script>
+</head>
+<body>
+<input type="button" value="随机排序" id="btn">
+<section class="wrap">
+    <ul id="photoWall" class="clearFix">
+        <li><img src="img/1.jpg" alt=""></li>
+        <li><img src="img/2.jpg" alt=""></li>
+        <li><img src="img/3.jpg" alt=""></li>
+        <li><img src="img/4.jpg" alt=""></li>
+        <li><img src="img/5.jpg" alt=""></li>
+        <li><img src="img/6.jpg" alt=""></li>
+        <li><img src="img/7.jpg" alt=""></li>
+        <li><img src="img/8.jpg" alt=""></li>
+        <li><img src="img/9.jpg" alt=""></li>
+        <li><img src="img/10.jpg" alt=""></li>
+        <li><img src="img/11.jpg" alt=""></li>
+        <li><img src="img/12.jpg" alt=""></li>
+    </ul>
+</section>
+</body>
+</html>
