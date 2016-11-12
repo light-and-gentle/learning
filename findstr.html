@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var str = 'sssfrddssgjh';
+    function test(str){
+        var obj = {};
+        var num = 0;
+        var value = '';
+        for (var i = 0; i < str.length; i++) {
+           if(!obj[str[i]]){
+               obj[str[i]] = [];
+           }
+            obj[str[i]].push(str[i])
+        }
+        for (var attr in obj) {
+            if(num <obj[attr].length){
+                num = obj[attr].length;
+                value = obj[attr][0];
+            }
+        }
+        return '最多的字符是：' + value +'，出现了：' + num + '次';
+    }
+    alert(test(str))
+    function test1(str){
+        var arr = str.split('');
+        arr.sort();//相同的会排在一起
+        str = arr.join('');
+        var re = /(\w)\1+/g;//第一个子项重复匹配,相当于\w出现了1次以上
+        var num = 0;
+        var value = '';
+        str.replace(re, function ($0,$1) {//$0重复的子项，$1子项
+            if(num <　$0.length){
+                num = $0.length;
+                value = $1;
+            }
+        });
+        return  '最多的字符是：' + value +'，出现了：' + num + '次';
+    }
+    test1(str)
+
+
+
+
+
+</script>
+</body>
+</html>
