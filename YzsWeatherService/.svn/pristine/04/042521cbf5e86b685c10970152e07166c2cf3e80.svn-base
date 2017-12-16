@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市气象服务产品制作系统</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/material-producing.css">
+</head>
+<body>
+<div class="s-top clearfix">
+  <div class="category ">
+    <!--<em>类&nbsp;别：</em>-->
+    <span class="lb-active">全&nbsp;部</span>
+   <p>
+      <em>农气情报：</em>
+      <span data-type="0" onclick="findProduct(0,[1],1,100)">旬&nbsp;报</span>
+      <span data-type="1" onclick="findProduct(1,[1],1,100)">春播专报</span>
+      <span data-type="2" onclick="findProduct(2,[1],1,100)">秋收秋种</span>
+      <span data-type="3" onclick="findProduct(3,[1],1,100)">干旱监测信息</span>
+      <span data-type="4" onclick="findProduct(4,[1],1,100)">气候影响评价</span>
+    </p>
+    <p>
+      <em>农气预报：</em>
+      <span data-type="5" onclick="findProduct(5,[1],1,100)">天气预报</span>
+      <span data-type="6" onclick="findProduct(6,[1],1,100)">农用天气预报</span>
+      <span data-type="7" onclick="findProduct(7,[1],1,100)">秋粮产量预报</span>
+      <span data-type="8" onclick="findProduct(8,[1],1,100)">短期气候预测</span>
+    </p>
+    <p>
+      <em>其&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;他：</em>
+      <span data-type="9" onclick="findProduct(9,[1],1,100)">农气科普</span>
+      <span data-type="10" onclick="findProduct(10,[1],1,100)"> 农技知识</span>
+    </p>
+  </div>
+</div>
+<div class="s-list">
+  <table cellspacing="0" class="s-table">
+    <thead>
+    <tr>
+      <td>标题</td>
+      <td>创建时间</td>
+      <td>状态 </td>
+      <td>类别</td>
+      <td>操作</td>
+    </tr>
+    </thead>
+    <tbody id="content">
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>
+        <span data-toggle="modal" data-target="#noPassModal" data-backdrop="static" style="background:#f60;"></span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<!--不通过弹框-->
+<div class="modal fade bs-example-modal-sm" id="noPassModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form class="form-horizontal">
+          <div class="control-group row">
+            <label class="control-label col-sm-4" for="inputEmail">描述：</label>
+            <div class="col-sm-6 interval">
+              <textarea name="" class="form-control" id="" cols="30" rows="5" style="resize: none"></textarea>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer text-center">
+        <button class="btn btn-primary" onclick="confirm()">确定</button>
+        <button class="btn btn-default" data-dismiss="modal" aria-hidden="true">取消</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<!--<div id="describediv">-->
+  <!--<div>-->
+    <!--<span>描述：</span>-->
+    <!--<textarea id="describe" cols="30" rows="5"></textarea>-->
+  <!--</div>-->
+	<!--<button class="sure-btn" onclick="confirm()">确定</button>-->
+	<!--<input type="hidden" id="id"/>-->
+<!--</div>-->
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="js/zz-main.js"></script>
+<script src="js/material-producting.js"></script>
+<script src="js/issue.js"></script>
+</body>
+</html>

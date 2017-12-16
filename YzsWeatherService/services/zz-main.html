@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市气象服务产品制作系统</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/main.css">
+
+
+</head>
+<body>
+<header class="header s-header clearfix">
+  <h1 class="logo">
+    <img src="img/s-logo.png" alt="">
+  </h1>
+  <!-- 头 -->
+  <nav class="menu-nav s-menu-nav" id="menu">
+   
+  </nav>
+  <img alt="退出" src="img/out.png" onclick="out()" style="position: absolute;right: 5px;top: 11px;">
+</header>
+
+<section class="warp s-warp clearfix">
+  <aside class="sidebar s-sidebar qx-sidebar">
+    <img src="img/s-top.png" alt="">
+    <!--材料制作-->
+    <ul class="s-menu-sidebar" id="clzz" style="display: block">
+      
+    </ul>
+
+    <!--产品服务-->
+    <ul class="s-menu-sidebar" id="cpfw">
+      <li data-whatever="">
+        <h2>
+          <i class="icon-qb"></i><span>农气情报</span><i class="mark"></i>
+        </h2>
+        <ul>
+          <li class="sub-active" data-whatever="cp-service" data-type="0">旬报</li>
+          <li data-whatever="cp-service" data-type="1">春播专报</li>
+          <li data-whatever="cp-service" data-type="2">秋收秋种</li>
+          <li data-whatever="cp-service" data-type="3">干旱监测信息</li>
+          <li data-whatever="cp-service" data-type="4">气候影响评价</li>
+        </ul>
+      </li>
+      <li class="s-menu-sidebar-active" data-whatever="">
+        <h2>
+          <i class="icon-yb"></i><span>农气预报</span><i class="mark "></i>
+        </h2>
+        <ul>
+          <li data-whatever="cp-service" data-type="5">天气预报</li>
+          <li data-whatever="cp-service" data-type="6">农用天气预报</li>
+          <li data-whatever="cp-service" data-type="7">秋粮产量预报</li>
+          <li data-whatever="cp-service" data-type="8">短期气候预测</li>
+        </ul>
+      </li>
+    </ul>
+    <!--灾情审核-->
+    <ul class="s-menu-sidebar" id="zqsh">
+      <li class="s-menu-sidebar-active" data-whatever="zq-check"><i></i><a href="javascript:void (0);">审&nbsp;核</a></li>
+    </ul>
+
+    <img class="img-s-bottom" src="img/s-bottom.png" alt="">
+  </aside>
+  <iframe class="main-content s-main-content" id="subpage" src=" " frameborder="0" scrolling="no">
+
+  </iframe>
+</section>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="js/intercept.js"></script>
+<script src="js/zz-main.js"></script>
+</body>
+</html>

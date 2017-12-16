@@ -1,0 +1,90 @@
+/**
+ * create by gc on 2017-12-5.
+ */
+$(function (){
+    byHour();
+    byMinute();
+    parent.setIframeHeight(window.parent.document.getElementById("subpage"));
+    //获取请求的参数
+    var url = location.search;
+    //console.log(url);
+    //拆分参数
+    var a=url.split("&");
+    //console.log(a);
+    //获取要查找的列
+    var typeCoulon=a[0].split("=")[1];
+    //console.log(typeCoulon);
+    //获取要查找得我
+    var mac= a[1].split("=")[1];
+    //console.log(mac)
+    var getTime= get60Minute();
+    getMinute(mac,typeCoulon,getTime.beginTime,getTime.endTime);
+});
+
+function getMinute(mac,colume,beginTime,endTime){
+    //console.log("mac:"+mac+"     colume:"+colume+"   begin:"+beginTime+"  end:"+endTime);
+    $.ajax({
+        url: "http://" + base + "/smart/query-by-mac-and-time",
+        data: {
+            colume:colume,
+            mac:  10042,
+            beginTime: beginTime,
+            endTime: endTime,
+            token:"c372adf83d67bb21b8e7767e923ec0fc"
+        },
+        type:"post",
+        dataType: "JSON",
+        success: function (data) {
+         //   console.log("查询回来的结果")
+           // console.log(data)
+            var getdata = new Array(data.length);
+            var getTime = new Array(data.length);
+            for (var i = 0 ;i <data.length;i++){
+                getdata[i]=data[i][colume] -0;
+                getTime[i]=data[i].datatime +'';
+            }
+            option2.xAxis[0].data=getTime;
+            option2.series[0].data=getdata;
+            console.log(getdata);
+            console.log(option2.xAxis.data,getTime);
+            myChart2.setOption(option2);
+            console.log("已生效")
+        }
+    })
+
+}
+
+function getBy10Day(mac,colume,beginTime,endTime){
+    
+    $.ajax({
+      url: "http://" + base + "/smart/query-by-mac-and-time",
+      data: {
+        colume:colume,
+        mac:  10042,
+        beginTime: beginTime,
+        endTime: endTime,
+        token:"c372adf83d67bb21b8e7767e923ec0fc"
+      },
+      type:"post",
+      dataType: "JSON",
+      success: function (data) {
+          console.log(data);
+      }
+    })
+}
+
+//获取十天的起止时间
+function get10Hour() {
+  var endTime = new Date();
+}
+
+//获取一小时逐分钟起止时间
+function get60Minute() {
+    var endTime = new Date();
+    var longTime=endTime.getTime();
+    longTime=longTime-1000*60*60;
+    var beginTime = new Date(longTime);
+    return {beginTime:beginTime,endTime:endTime}
+}
+
+

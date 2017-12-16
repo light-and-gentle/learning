@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市气象服务产品制作系统</title>
+  <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+  <meta http-equiv="description" content="this is my page">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../kindeditor/themes/default/default.css" />
+  <link rel="stylesheet" href="css/material-producing.css">
+</head>
+<body>
+<div class="s-add-top clearfix">
+ <div class="tittle-content">
+   <input type="text" class="tittle-text">
+   <span class="tittle-btn">标&nbsp;题</span>
+ </div>
+  <span class="return-btn" title="返回"></span>
+</div>
+<div class="s-textarea-content">
+  <textarea name="content" id="edit" style="width:100%;height:400px;visibility:hidden;">KindEditor</textarea>
+  <div class="btn-content">
+    <button>存档</button>
+    <button>提交</button>
+  </div>
+</div>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="../kindeditor/kindeditor-all.js"></script>
+<script charset="utf-8" src="../kindeditor/lang/zh-CN.js"></script>
+<script src="js/zz-main.js"></script>
+<script src="js/material-producting.js"></script>
+<script>
+  //KindEditor脚本
+  var editor;
+  KindEditor.ready(function(K) {
+    editor = K.create('#edit', {
+    });
+  });
+</script>
+</body>
+</html>

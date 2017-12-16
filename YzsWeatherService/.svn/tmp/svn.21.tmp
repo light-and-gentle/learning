@@ -1,0 +1,70 @@
+var base = "192.168.1.113:20010";
+$(function(){
+	getSetup();
+});
+
+/**
+ * 加载视频
+ */
+function getSetup(){
+	SewisePlayer.setup({
+		server: "live",
+		type: "rtmp",
+		autostart: "true",
+		buffer: 1,
+		streamurl: 'rtmp://27.221.103.12:1935/live/B159736252_0_1?token=cV3Kg4fbfcLoQJDhyPVAZ1b3mEhJemEcw2Z1NZ17Gii0Hh7NNvlm6IhINRrCg8CGFJn9am9ps3qfyvPCevXQtNsnEZ1wreMq2rZ1kZ2RdSmATTiDcZ3',  
+        skin: "liveWhite",
+        poster: "http://jackzhang1204.github.io/materials/poster.png",
+        claritybutton: "disable",
+		title: "智慧园丁demo",
+        fallbackurls:{
+    		m3u8: "http://219.232.161.204:80/hls/vk5nx2cj.m3u8"
+		}
+	}, "player");
+}
+
+function getSurfaceData(obj){
+    $.ajax({
+        url: "http://" + base + "/surface_data/search",
+        data: "station=" + obj + "&token=c372adf83d67bb21b8e7767e923ec0fc",
+        //type:"post",
+        dataType: "JSON",
+        success: function (data) {
+            console.log(data)
+            //温度
+            temp(data.temp/10,1);
+            //空气湿度
+            rh(data.rh,1);
+            //1小时降雨量
+            fainFall(data.r1,1);
+            //气压
+            pre(data.press/10,1);
+            //风速
+            winds(data.windSpeed10/10,1)
+            //风向
+            var a=data.windDir10/3.6;
+            windDir(a,1);
+            //设置传感器
+            $(".device-name").html(data.station);
+            //数据入库时间
+            var date= new Date(data.updateTime);
+            var s=""+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate() +" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()
+            $(".update-time span").html(s);
+            //以下数据暂无
+            st(34,0);
+            sh(40,0);
+            eff(20,0);
+
+        }
+    });
+   /* $.ajax({
+        url: "http://" + base + "/smart/query-by-mac",
+        data: "mac=" + obj + "&token=c372adf83d67bb21b8e7767e923ec0fc",
+        //type:"post",
+        dataType: "JSON",
+        success: function (data) {
+            console.log(data);
+
+        }
+    });*/
+}

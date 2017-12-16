@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--引入的路径是生成dist后相对与index.html的相对路径-->
+    <link rel="stylesheet" href="assets/scss/reset.css">
+    <link rel="stylesheet" href="assets/scss/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.edit.css" />
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<div class="dialog-box">
+    <div class="dialog-title">
+        <h2 class="sub-title">
+            品种详情
+        </h2>
+        <span class="close-icon"></span>
+    </div>
+    <div class="species-info">
+        <div>选择主分类</div>
+        <div id="divselect" class="common-border">
+            <cite></cite>
+            <ul>
+                <li><a href="javascript:;" selectid="1">番茄</a></li>
+                <li><a href="javascript:;" selectid="2">黄瓜</a></li>
+                <li><a href="javascript:;" selectid="3">黄瓜</a></li>
+                <li><a href="javascript:;" selectid="4">番茄</a></li>
+                <li><a href="javascript:;" selectid="5">番茄</a></li>
+            </ul>
+        </div>
+        <input name="" type="hidden" value="" id="inputselect"/>
+        <div>品种ID</div>
+        <input type="text" class="common-border  unique-num">
+        <div>品种名称</div>
+        <input type="text" class="common-border">
+        <input type="text">
+    </div>
+    <div class="intro">
+        <h3 class="subhead">品种介绍</h3>
+        <textarea name="variety-info" id="" ></textarea>
+    </div>
+    <div class="property">
+        <h3 class="subhead">品种属性</h3>
+        <div class="property-list">
+            <table cellspacing="0" cellpadding="0" class=" table table-bordered">
+                <tbody>
+                <tr>
+                    <td>种子库编号</td>
+                    <td >Ⅱ6A0 105</td>
+                    <td>统一编号</td>
+                    <td >V 06A0001</td>
+                </tr>
+                <tr>
+                    <td>品种名称</td>
+                    <td >真善美</td>
+                    <td>译名</td>
+                    <td >ZHEN SHAN MEI</td>
+                </tr>
+                <tr>
+                    <td>种子来源</td>
+                    <td>安徽蚌市</td>
+                    <td>保存单位</td>
+                    <td>安徽农科院园艺所</td>
+                </tr>
+                <tr>
+                    <td>保存编号</td>
+                    <td >Le8(80)</td>
+                    <td>生育期</td>
+                    <td>60</td>
+                </tr>
+                <tr>
+                    <td>熟性</td>
+                    <td >中熟</td>
+                    <td>株型</td>
+                    <td>蔓生</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="add-line">添加一行<span>+</span></p>
+    </div>
+    <div class="thn">
+        <h3 class="subhead">缩略图片 （最大尺寸：440*330 4:3）</h3>
+        <div class="opa-pic">
+            <img src="" alt="">
+            <p class="opa">
+                <input type="file" name="fileField" class="file" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value" />
+                <input type="submit" name="submit" class=" uploading" value="上传" />
+                <span class="del-pic">删除</span>
+            </p>
+        </div>
+    </div>
+    <div class="pic-show">
+        <h3 class="subhead">详情展示图片 （最多三张 最大尺寸：1080*810 4:3）</h3>
+        <div class="pic-list">
+            <img src="" alt="">
+            <p class="opa">
+                <input type="file" name="fileField" class="file" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value" />
+                <input type="submit" name="submit" class=" uploading" value="上传" />
+                <span class="del-pic">删除</span>
+            </p>
+        </div>
+        <div class="pic-list">
+            <img src="" alt="">
+            <p class="opa">
+                <input type="file" name="fileField" class="file" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value" />
+                <input type="submit" name="submit" class=" uploading" value="上传" />
+                <span class="del-pic">删除</span>
+            </p>
+        </div>
+        <div class="pic-list last">
+            <p class="opa">
+                <span class="add-pic"></span>
+                <input type="file" name="fileField" class="file" id="fileField" size="28" onchange="document.getElementById('textfield').value=this.value" />
+            </p>
+        </div>
+    </div>
+    <div class="save-btn">
+        保存
+    </div>
+
+</div>
+</body>
+<script src="assets/js/jquery-2.2.1.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+</html>
+
+
+

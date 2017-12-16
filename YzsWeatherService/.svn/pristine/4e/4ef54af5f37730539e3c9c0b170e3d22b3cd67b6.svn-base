@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MyHtml.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <link rel="stylesheet" href="kindeditor/themes/default/default.css" />
+  <script type="text/javascript" src="kindeditor/kindeditor-all.js"></script>
+  <script charset="utf-8" src="kindeditor/lang/zh-CN.js"></script>
+  <script type="text/javascript">
+    //KindEditor脚本
+    var editor;
+    KindEditor.ready(function(K) {
+        editor = K.create('#ss', {
+        });
+    });
+</script>
+  <body>
+   <textarea name="content" id="ss" style="width:800px;height:400px;visibility:hidden;">KindEditor</textarea>
+  </body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市气象服务产品制作系统</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/simplePagination.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/material-producing.css">
+</head>
+<body>
+<div class="s-list">
+  <table cellspacing="0" class="s-table">
+    <thead>
+    <tr>
+      <td>标题</td>
+      <td>创建时间</td>
+      <td>状态 </td>
+      <td>类别</td>
+      <td>操作</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr title="1234">
+      <td>2014年保德县春播专报 </td>
+      <td>2017-04-15 16:35:55</td>
+      <td>已发布</td>
+      <td>洪涝</td>
+      <td>
+        <span class="details" data-toggle="modal" data-target="#detailsModal" data-backdrop="static" data-whatever="2014年保德县春播专报"><a href="javascript:void (0);">详情</a></span>
+      </td>
+    </tr>
+    <tr title="">
+      <td>2014年保德县春播专报 </td>
+      <td>2017-04-15 16:35:55</td>
+      <td>待审核</td>
+      <td>洪涝</td>
+      <td>
+        <span class="details" data-toggle="modal" data-target="#detailsModal" data-backdrop="static" data-whatever="2014年保德县春播专报"><a href="javascript:void (0);">详情</a></span>
+      </td>
+    </tr>
+    <tr title="">
+      <td>2014年保德县春播专报 </td>
+      <td>2017-04-15 16:35:55</td>
+      <td>未通过</td>
+      <td>洪涝</td>
+      <td>
+        <span class="details" data-toggle="modal" data-target="#detailsModal" data-backdrop="static" data-whatever="2014年保德县春播专报"><a href="javascript:void (0);">详情</a></span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="page-content">
+    <div class="pagination-holder clearfix">
+      <div id="light-pagination" class="pagination clearfix"></div>
+    </div>
+  </div>
+
+  <!--详情弹框-->
+  <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <div class="show-img">
+            <img src="img/1457315642s.jpg" alt="洪涝灾害">
+          </div>
+          <p>目前，枸杞处于老眼枝现蕾、开花期、春梢生长期，枸杞木虱、龟甲、负泥虫、瘿螨、卷梢蛾、红瘿蚊等虫害易发生，请各基地注意监测，避开风沙天气及时防治。</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-sure">通过</button>
+          <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">不通过</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/jquery.simplePagination.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="js/zz-main.js"></script>
+<script src="js/material-producting.js"></script>
+<script>
+  //  分页
+  $('#light-pagination').pagination({
+    items: 100,
+    itemsOnPage: 10,
+    cssStyle: 'light-theme'
+  });
+
+//  模态框
+  $('#detailsModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget); // 触发事件的按钮
+    var recipient = button.data('whatever');  // 解析出data-whatever内容
+    var modal = $(this);
+    modal.find('.modal-title').text( recipient)
+  })
+
+$('.btn-sure').on('click',function () {
+  $('#detailsModal').modal('hide')
+})
+</script>
+</body>
+</html>

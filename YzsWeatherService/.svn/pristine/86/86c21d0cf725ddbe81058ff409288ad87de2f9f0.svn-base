@@ -1,0 +1,40 @@
+$(function (){
+    //获取请求的参数
+    var url = location.search;
+    //console.log(url);
+    //拆分参数
+    var a=url.split("&");
+    //console.log(a);
+    //获取要查找的列
+    var typeCoulon=a[0].split("=")[1];
+    //console.log(typeCoulon);
+    //获取要查找得我
+    var mac= a[1].split("=")[1];
+    //console.log(mac)
+    var getTime= get60Minute();
+    getMinute(mac,typeCoulon,getTime.beginTime,getTime.endTime);
+});
+
+function getMinute(mac,colume,beginTime,endTime){
+    $.ajax({
+        url: "http://" + base + "/smart/query-by-mac-and-time",
+        data: "colume="+colume+"&mac=" + mac +"&beginTime=" + beginTime +"&endTime=" + endTime + "&token=c372adf83d67bb21b8e7767e923ec0fc",
+        //type:"post",
+        dataType: "JSON",
+        success: function (data) {
+            console.log("查询回来的结果")
+            console.log(data)
+        }
+    })
+}
+
+function get60Minute() {
+    var endTime = new Date();
+    var longTime=endTime.getTime();
+    longTime=longTime-1000*60*60;
+    var beginTime = new Date(longTime);
+
+    return {beginTime:beginTime,endTime:endTime}
+}
+
+

@@ -1,0 +1,28 @@
+/**
+ * Created by mt on 2017-12-14.
+ */
+$(function () {
+  //分类
+  $('.info-type').on('click','li',function () {
+    $('.info-type li').removeClass('nq-active');
+    $(this).addClass('nq-active')
+  });
+  //列表
+  $('.info-list-content').on('click','h2',function () {
+    var self = $(this);
+    if($(this).hasClass('open')){
+      self.removeClass('open');
+      self.find('.fa').removeClass('fa-angle-up').addClass('fa-angle-down');
+      self.next().slideUp()
+    }else {
+      self.addClass('open').parents().siblings().find('h2').removeClass('open');
+      self.parents('li').siblings().find('.fa').removeClass('fa-angle-up').addClass('fa-angle-down');
+      self.find('.fa').addClass('fa-angle-up').removeClass('fa-angle-down');
+      self.next().slideDown().parents().siblings().find('.u-cont').slideUp()
+    }
+  });
+//  scrollbar
+  $(".info-list-content").mCustomScrollbar({
+    theme:"minimal"
+  });
+});

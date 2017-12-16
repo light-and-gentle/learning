@@ -1,0 +1,40 @@
+/**
+ * Created by mt on 2017-12-11.
+ */
+$(function () {
+  showHTML()
+  $('.s-menu-nav a').on('click',function () {
+    $(this).addClass('menu-nav-active').siblings().removeClass('menu-nav-active');
+    showHTML()
+  });
+  $('.s-menu-sidebar').on('click','li',function () {
+    var recipient = $(this).data('whatever');
+    console.log(recipient);
+    if(recipient !==''){
+      $('iframe.main-content').attr('src', recipient+'.html')
+    }
+    $(this).addClass('s-menu-sidebar-active').siblings().removeClass('s-menu-sidebar-active')
+    setIframe()
+  });
+});
+
+/*
+*默认展示页
+* */
+
+function showHTML() {
+  var ulId = $('.menu-nav-active').data('whatever');
+  $('#'+ulId).show().siblings('ul').hide();
+  var iframeSrc = $('#'+ulId+ ' li').eq(0).data('whatever');
+  $('iframe.main-content').attr('src', iframeSrc+'.html')
+}
+
+
+/**
+ * 页面加载完成设置iframe高度
+ */
+function setIframe(){
+  if(document.body.clientHeight!=0){
+    $('#subpage',parent.document).css("height",document.body.clientHeight);
+  }
+}

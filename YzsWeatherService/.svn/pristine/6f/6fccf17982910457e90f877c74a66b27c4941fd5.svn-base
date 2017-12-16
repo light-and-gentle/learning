@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市农业气象综合服务平台</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <!--<link rel="stylesheet" href="css/county.css">-->
+
+</head>
+<body>
+<header class="header clearfix">
+  <h1 class="logo">
+    <img src="../img/logo.png" alt="">
+  </h1>
+  <div class="btn-nav">
+    <a target="_self" class="qr-code" onMouseOut="hideImg()" onmouseover="showImg()">
+    </a>
+    <a href="" target="_self" class="tc">
+    </a>
+  </div>
+  <nav class="menu-nav">
+    <a href="../login/login.html" target="_self">首页</a>
+    <a href="zx-main.html?type=1" target="_self" data-whatever="quxian">区县</a>
+    <a href="zx-main.html?type=2" target="_self" data-whatever="nongqi">农气</a>
+    <a href="zx-main.html?type=3" target="_self" class="menu-nav-active" data-whatever="nongqing">农情</a>
+  </nav>
+</header>
+  <!--微信二维码-->
+  <div class="code">
+	<img src="../img/weixin.png" width="100%" />
+  </div>
+<section class="warp clearfix">
+  <aside class="sidebar qx-sidebar">
+    <img src="../img/quxian.png" alt="">
+
+    <!--区县-->
+    <ul class="menu-sidebar" id="quxian">
+      <li class="menu-sidebar-active" data-whatever="qx-microclimate">
+        <i></i><a href="javascript:;">小气候观测</a>
+      </li>
+      <li class="facility">
+        <i></i><a href="http://xz.fw121.net/" >农业设施</a>
+      </li>
+      <li data-whatever="qx-weather">
+        <i></i><a href="javascript:;">气象观测</a>
+      </li>
+    </ul>
+
+    <!--农气-->
+    <ul class="menu-sidebar" id="nongqi">
+      <li class="menu-sidebar-active" data-whatever="nqi-information"><i></i><a href="">农气情报</a></li>
+      <li><i></i><a href="javascript:;">业务产品</a></li>
+      <li data-whatever="nqi-prediction"><i></i><a href="javascript:;">农气预报</a></li>
+      <li><i></i><a href="javascript:;">农气科普</a></li>
+    </ul>
+    <!--农情-->
+    <ul class="menu-sidebar" id="nongqing">
+      <li class="menu-sidebar-active" data-whatever="nq-early-warning"><i></i><a href="javascript:;">监测预警</a></li>
+      <li data-whatever="nq-area-products"><i></i><a href="javascript:;">区县产品</a></li>
+      <li><i></i><a href="javascript:;">农技知识</a></li>
+      <li><i></i><a href="javascript:;">农情情报</a></li>
+    </ul>
+
+
+
+  </aside>
+	<iframe class="main-content" id="subpage" src="" frameborder="0" scrolling="no">
+
+  </iframe>
+</section>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市农业气象综合服务平台</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/county.css">
+</head>
+<body onload="setIframe()">
+
+  <!--<div class="main-content">-->
+    <div class="content-top clearfix">
+      <div class="select-area">
+        <div class="qx">
+          <span class="current-area">区县选择</span>
+          <i class="qx-icon triangle-down"></i>
+        </div>
+        <div class="area-content">
+          <ol>
+            <li class="area-active">保德县</li>
+            <li>定襄县</li>
+            <li>代县</li>
+            <li>繁峙县</li>
+            <li>河曲县</li>
+            <li>静乐县</li>
+            <li>岢岚县</li>
+            <li>宁武县</li>
+            <li>偏关县</li>
+            <li>神池县</li>
+            <li>五台县</li>
+            <li>五寨县</li>
+            <li>原平市</li>
+          </ol>
+        </div>
+      </div>
+      <div class="zd-content">
+        <div class="arrow arrow-l"></div>
+        <div class="zd-name-content">
+          <ul class="zd-name">
+            <li data-sid="N9004">农科院观测</li>
+            <li data-sid="N0010">代县农科院忻州市气候中心实验日光温室4号棚</li>
+            <li data-sid="N0021" class="zd-active">农科院观测02</li>
+            <li data-sid="N6005">农科院东02</li>
+            <li data-sid="N9104">农科院观测02</li>
+            <li data-sid="N9034">梅厂镇02</li>
+            <li data-sid="N9204">农科院观测02</li>
+            <li data-sid="N9604">农科院观测02</li>
+          </ul>
+        </div>
+        <div class="arrow arrow-r"></div>
+      </div>
+
+    </div>
+    <div class="sub-content">
+      <div class="content microclimate-content clearfix">
+        <div class="sub-content-l fl">
+          <div class="icon-content">
+            <i class="icon"></i>
+          </div>
+          <ul class="param">
+            <li class="param-active" data-type="temp">
+              <i class="temp"></i>
+              <p>温度</p>
+            </li>
+            <li data-type="rh">
+              <i class="rh"></i>
+              <p>湿度</p>
+            </li>
+            <li data-type="st">
+              <i class="st"></i>
+              <p>土壤温度</p>
+            </li>
+            <li data-type="sh">
+              <i class="sh"></i>
+              <p>土壤湿度</p>
+            </li>
+            <li data-type="fainFall">
+              <i class="fain-fall"></i>
+              <p>雨量</p>
+            </li>
+            <li data-type="pre">
+               <i class="pre"></i>
+              <p>气压</p>
+            </li>
+            <li data-type="eff">
+               <i class="eff"></i>
+              <p>光合有效辐射</p>
+            </li>
+            <li data-type="winds">
+              <i class="winds"></i>
+              <p>风速</p>
+            </li>
+            <li data-type="windDir">
+              <i class="wind-dir"></i>
+              <p>风向</p>
+            </li>
+          </ul>
+        </div>
+        <div class="sub-content-r fr bt bs">
+          <div class="title-content "></div>
+          <div class="sub-chart-content">
+            <div class="chart-title">10天逐时</div>
+            <div class="line-chart-info" id="by-hour"></div>
+          </div>
+          <div class="sub-chart-content">
+            <div class="chart-title">每时逐分钟</div>
+            <div class="line-chart-info" id="by-minute"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--</div>-->
+
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/echarts.min.js"></script>
+<script src="js/req-config.js"></script>
+<script src="../js/main.js"></script>
+<script src="js/panel.js"></script>
+<!--<script src="js/qx-microclimate.js"></script>-->
+<script src="js/qx-sub-microclimate-req.js"></script>
+<script>
+
+</script>
+</body>
+</html>

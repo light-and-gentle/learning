@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>灾情反馈</title>
+  <meta name="author" content="cuimeiting"/>
+  <meta name="screen-orientation" content="portrait"> <!--规定UC浏览器强制全屏的-->
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1" />
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/xz-base.css">
+</head>
+<body class="bodycl">
+<div class="app-view">
+  <!-- Begin header has back-->
+  <header class="app-header">
+    <a href="#" class="back">
+      <i class="fa  fa-angle-left"></i>
+      返回
+    </a>
+    <h1 class="title">灾情反馈</h1>
+    <a href="" class="more">
+      <i class="fa fa-ellipsis-h"></i>
+    </a>
+  </header>
+  <!-- End header has back-->
+
+  <!-- Begin 主体部分-->
+  <div class="app-content">
+    <div class="content-header">
+      <h2>灾情反馈</h2>
+      <a href="" class="list">
+        <i class="fa fa-list-ul"></i>
+      </a>
+    </div>
+    <div class="content-content">
+      <div class="content-top clearfix">
+        <div class="allocation">
+          <i class="fa fa-map-marker"></i>
+          <p class="site">
+            位置定位：
+            <span>曲江樟市</span>
+          </p>
+        </div>
+        <div class="current-time">
+          <p class="time">
+            当前时间：
+            <span>2017/10/30&nbsp;&nbsp;16:24</span>
+          </p>
+        </div>
+      </div>
+      <div class="content-body">
+        <div class="sub-title">
+          类型选择：
+        </div>
+        <div class="img-content">
+          <ul class="img-list clearfix">
+            <li class="active">
+              <img src="image/hl.png" alt="洪涝">
+              <span>洪涝</span>
+              <div class="mark">
+                <i class="fa fa-check"></i>
+              </div>
+            </li>
+            <li>
+              <img src="image/gh.png" alt="干旱">
+              <span>干旱</span>
+              <div class="mark">
+                <i class="fa fa-check"></i>
+              </div>
+            </li>
+            <li>
+              <img src="image/dh.png" alt="冻害">
+              <span>冻害</span>
+              <div class="mark">
+                <i class="fa fa-check"></i>
+              </div>
+            </li>
+            <li>
+              <img src="image/df.png" alt="倒伏">
+              <span>倒伏</span>
+              <div class="mark">
+                <i class="fa fa-check"></i>
+              </div>
+            </li>
+            <li>
+              <img src="image/bch.png" alt="病虫害">
+              <span>病虫害</span>
+              <div class="mark">
+                <i class="fa fa-check"></i>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="sub-title">
+          反馈标题
+        </div>
+        <div class="text-content">
+          <input type="text" class="control-text"
+                 placeholder="请输入反馈标题"
+                 onfocus="this.placeholder=''"
+                 onblur="this.placeholder='请输入反馈标题'">
+        </div>
+        <div class="sub-title">
+          灾情描述：
+        </div>
+        <div class="text-content">
+          <textarea name="" class="control-text"
+                    id="" cols="30" rows="5"
+                    placeholder="如无法定位或位置不准，可在此处手动输入地址并详细描述实时农情"
+                    onfocus="this.placeholder=''"
+                    onblur="this.placeholder='如无法定位或位置不准，可在此处手动输入地址并详细描述实时农情'"></textarea>
+        </div>
+        <div class="sub-title">
+          图片上传：
+        </div>
+        <div class="text-content update-img control-text">
+          <button class="update-img-btn">选取文件</button>
+          <span></span>
+        </div>
+      </div>
+      <div class="content-footer">
+        <button class="submit-btn">提交</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- End 主体部分-->
+</div>
+
+<script src="js/initial.js"></script>
+<script src="js/jquery-2.1.1.min.js"></script>
+<script>
+  $('.img-list').on('click','li',function () {
+    $(this).addClass('active').siblings().removeClass('active')
+  })
+</script>
+</body>
+</html>

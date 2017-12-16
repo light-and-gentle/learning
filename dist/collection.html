@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>蔬菜品评监控系统</title>
+    <meta name="description" content="{description}" />
+    <meta name="keywords" content="{keywords}" />
+    <link rel="stylesheet" href="assets/scss/reset.css">
+    <link rel="stylesheet" href="assets/scss/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="css/layout.css"/>
+    
+<link rel="stylesheet" href="css/collection.css" />
+
+</head>
+<body>
+    <div class="functional">
+        <div class="title">蔬菜品评监控系统</div>
+        <div class="fun-btn">
+            <i class="icon computer"></i>
+            <i class="icon setting"></i>
+            <i class="icon switch"></i>
+        </div>
+        <div class="userinfo">
+            <div class="avatar"><img src="" alt=""></div>
+            <div class="login-info">
+                <div class="user">
+                    <span class="user-name">admin,</span>
+                    <span>欢迎你</span>
+
+                </div>
+                <p class="data-time">
+                    <span>2017年3月30日</span>
+                    <span>20:00</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="box">
+            <div class="sidebar ">
+                <div class="fold-icon" id="fold"></div>
+                <div class="side-title-wrapper">
+                    <h2 class="side-title">导航菜单</h2>
+                </div>
+
+                <ul class="side-nav">
+                    <li class="side-info active">
+                        <i class="side-icon variety "></i>
+                        <h2 class="side-tit"> 品种信息管理</h2>
+                        <ul class="side-con">
+                            <li class="current item-hook" data-name="index">品种管理</li>
+                            <li class="item-hook" data-name="batch">评价批次管理</li>
+                        </ul>
+                    </li>
+                    <li class="side-info">
+                        <i class="side-icon collect"></i>
+                        <h2 class="side-tit">采集指标管理</h2>
+                        <ul class="side-con">
+                            <li class="item-hook" data-name="collection">指标库管理</li>
+                        </ul>
+
+                    </li>
+                    <li class="side-info">
+                        <i class="side-icon  img-info"></i>
+                        <h2 class="side-tit">图像信息管理</h2>
+                        <ul class="side-con">
+                            <li class="item-hook">实时监控影像</li>
+                            <li class="item-hook">历史监控截图</li>
+                        </ul>
+                    </li>
+                    <li class="side-info">
+                        <i class="side-icon env"></i>
+                        <h2 class="side-tit">环境信息管理</h2>
+                        <ul class="side-con">
+                            <li class="item-hook">空气温度</li>
+                            <li class="item-hook">空气湿度</li>
+                            <li class="item-hook">土壤温度</li>
+                            <li class="item-hook">土壤湿度</li>
+                            <li class="item-hook">光辐射照度</li>
+                            <li class="item-hook">CO2浓度</li>
+                            <li class="item-hook">土壤PH值</li>
+                            <li class="item-hook">土壤EC值</li>
+                        </ul>
+
+                    </li>
+                    <li class="side-info">
+                        <i class="side-icon analyze"></i>
+                        <h2 class="side-tit">综合评价分析</h2>
+                        <ul class="side-con">
+                            <li class="item-hook">单批次评价</li>
+                            <li class="item-hook">评价展示设置</li>
+                            <li class="item-hook">多批次评价</li>
+                            <li class="item-hook">过往报告</li>
+                            <li class="item-hook">关注度/喜好</li>
+                        </ul>
+
+                    </li>
+                    <li class="side-info">
+                        <i class="side-icon sys-setting"></i>
+                        <h2 class="side-tit">系统设置</h2>
+                        <ul class="side-con">
+                            <li class="item-hook">用户设置</li>
+                            <li class="item-hook">硬件关联配置</li>
+                        </ul>
+
+                    </li>
+                    <li class="side-info">
+                        <i class="side-icon dictionary"></i>
+                        <h2 class="side-tit">数据字典</h2>
+                        <ul class="side-con">
+                            <li class="item-hook">蔬菜主分类</li>
+                            <li class="item-hook">站点字典</li>
+                            <li class="item-hook">总部摄像头</li>
+                            <li class="item-hook">总部传感器</li>
+                            <li class="item-hook">地区字典</li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            
+<div class="collection-content">
+    <div class="content-head clearFix">
+        <h2 class="content-title">
+            指标库管理
+        </h2>
+        <div class="create-item" id="create-item">
+            新增指标
+        </div>
+    </div>
+    <div class="item-info">
+        <div class="option-info">
+            <span class="category">分类</span>
+            <div class="opt">
+                <input class="magic-radio" type="radio" name="radio" id="r1" value="option1" checked>
+                <label for="r1">番茄</label>
+            </div>
+            <div class="opt">
+                <input class="magic-radio" type="radio" name="radio" id="r2" value="option2" >
+                <label for="r2">黄瓜</label>
+            </div>
+        </div>
+        <div class="indicator">
+            <span class="indicator">标题</span>
+            <input type="text">
+            <span class="indicator">标签</span>
+            <input type="text">
+            <span class="indicator">指标类型</span>
+            <input type="text">
+            <span class="indicator">状态</span>
+            <input type="text">
+        </div>
+        <div class="check">查询</div>
+
+    </div>
+    <div class="indicator-list">
+        <table cellspacing="0" cellpadding="0" class="table table-condensed  table-bordered" >
+            <thead class="sample-list-title">
+            <tr>
+                <td>指标ID</td>
+                <td>标题</td>
+                <td>标签</td>
+                <td>题目类型</td>
+                <td>前端排序</td>
+                <td>状态</td>
+                <td >操作</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>100001</td>
+                <td>生育期</td>
+                <td>无</td>
+                <td>描述指标</td>
+                <td><span class="common-border">1</span></td>
+                <td><span class="efficient">已生效</span><span class="lose-efficacy">失效</span></td>
+                <td><span class="detail">详细</span><span class="del">删除</span></td>
+            </tr>
+            <tr>
+                <td>100002</td>
+                <td>熟性</td>
+                <td>无</td>
+                <td>描述指标</td>
+                <td><span class="common-border">2</span></td>
+                <td><span class="efficient">已生效</span><span class="lose-efficacy">失效</span></td>
+                <td><span class="detail">详细</span><span class="del">删除</span></td>
+            </tr>
+            <tr>
+                <td>100003</td>
+                <td>生长习性</td>
+                <td>无</td>
+                <td>描述指标</td>
+                <td><span class="common-border">3</span></td>
+                <td><span class="efficient">已生效</span><span class="lose-efficacy">失效</span></td>
+                <td><span class="detail">详细</span><span class="del">删除</span></td>
+            </tr>
+            <tr>
+                <td>100004</td>
+                <td>始花节位</td>
+                <td>无</td>
+                <td>描述指标</td>
+                <td><span class="common-border">4</span></td>
+                <td><span class="efficient">未生效</span><span class="lose-efficacy">生效</span></td>
+                <td><span class="detail">详细</span><span class="del">删除</span></td>
+            </tr>
+            <tr>
+                <td>100005</td>
+                <td>果形</td>
+                <td>果实</td>
+                <td>描述指标</td>
+                <td><span class="common-border">5</span></td>
+                <td><span class="efficient">未生效</span><span class="lose-efficacy">生效</span></td>
+                <td><span class="detail">详细</span><span class="del">删除</span></td>
+            </tr>
+            <tr>
+                <td>100006</td>
+                <td>果单重</td>
+                <td>果实</td>
+                <td>描述指标</td>
+                <td><span class="common-border">6</span></td>
+                <td><span class="efficient">未生效</span><span class="lose-efficacy">生效</span></td>
+                <td><span class="detail">详细</span><span class="del">删除</span></td>
+            </tr>
+            <tr>
+                <td>100005</td>
+                <td>果脐大小</td>
+                <td>果实</td>
+                <td>量化指标</td>
+                <td><span class="common-border">7</span></td>
+                <td><span class="efficient">未生效</span><span class="lose-efficacy">生效</span></td>
+                <td><span class="detail">详细</span><span class="del">删除</span></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="page-btn">
+        <span class="prev">上页</span>
+        <span class="nun-btn nun-active">1</span>
+        <span class="nun-btn">2</span>
+        <span class="nun-btn">3</span>
+        <span class="next">下页</span>
+    </div>
+
+</div>
+
+        </div>
+    </div>
+    <script src="assets/js/jquery-2.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="js/base.js"></script>
+    
+    
+</body>
+</html>

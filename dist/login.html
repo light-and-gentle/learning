@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--引入的路径是生成dist后相对与index.html的相对路径-->
+    <link rel="stylesheet" href="assets/scss/reset.css">
+    <link rel="stylesheet" href="css/login.css">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="wrapper">
+        <div class="login-wrapper ">
+            <div class="title">
+
+            </div>
+            <h2 class="logo">耕智</h2>
+        </div>
+        <div class="login-dialogue">
+            <h3>用户登录</h3>
+            <div class="login-content">
+                <div class="input-wrapper  error">
+                    <span  class="icon-wrapper">
+                        <i class="icon user-icon"></i>
+                    </span>
+                    <input type="text" class="user-name input-hook" placeholder=" 请输入用户名" onfocus="this.placeholder=''"  onblur="if(this.value==''){this.placeholder='请输入用户名'}">
+                    <div class="tip">
+                        <span>用户名不存在</span>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <span  class="icon-wrapper">
+                        <i class="icon password-icon"></i>
+                    </span>
+                    <input type="password" class="password input-hook" placeholder=" 请输入密码" onfocus="this.placeholder=''"  onblur="if(this.value==''){this.placeholder='请输入密码'}">
+                    <div class="tip">
+                        <span>密码输入错误</span>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <input type="text" class="ver-input input-hook" placeholder=" 请输入验证码" onfocus="this.placeholder=''"  onblur="if(this.value==''){this.placeholder='请输入验证码'}"><img src="" alt="" class="ver-img">
+                    <div class="tip">
+                        <span>验证码输入错误</span>
+                    </div>
+                </div>
+                <div class="input-wrapper">
+                    <button  class="login-btn">
+                        登陆
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--引入的路径是生成dist后相对与index.html的相对路径-->
+    <script src="assets/js/jquery-2.2.1.min.js"></script>
+    <script src="http://cdn.bootcss.com/blueimp-md5/1.1.0/js/md5.min.js"></script>
+    <script src="js/login.js"></script>
+</body>
+</html>

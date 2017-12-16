@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市气象服务产品制作系统</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="css/material-producing.css">
+</head>
+<body>
+<div class="s-top clearfix">
+  <div class="category ">
+    <span>类&nbsp;别：</span>
+    <span class="radio-box">
+        <input type="radio" id="total" name="radio" checked>
+        <label for="total"></label>
+        <em>全&nbsp;部</em>
+      </span>
+    <div>
+      <span>农气情报：</span>
+      <span class="radio-box">
+        <input type="radio" id="xb" name="radio">
+        <label for="xb"></label>
+        <em>旬&nbsp;报</em>
+      </span>
+      <span class="radio-box">
+        <input type="radio" id="cbzb" name="radio">
+        <label for="cbzb"></label>
+        <em>春播专报</em>
+      </span>
+      <span class="radio-box">
+        <input type="radio" id="qsqz" name="radio">
+        <label for="qsqz"></label>
+        <em>秋收秋种</em>
+      </span>
+      <span class="radio-box">
+        <input type="radio" id="ghjc" name="radio">
+        <label for="ghjc"></label>
+        <em>干旱监测信息</em>
+      </span>
+      <span class="radio-box">
+        <input type="radio" id="qhyx" name="radio">
+        <label for="qhyx"></label>
+        <em>气候影响评价</em>
+      </span>
+    </div>
+    <div>
+      <span>农气预报：</span>
+      <span class="radio-box">
+        <input type="radio" id="tqyb" name="radio">
+        <label for="tqyb"></label>
+        <em>天气预报</em>
+      </span>
+      <span class="radio-box">
+        <input type="radio" id="nytq" name="radio">
+        <label for="nytq"></label>
+        <em>农用天气预报</em>
+      </span>
+      <span class="radio-box">
+        <input type="radio" id="qlcl" name="radio">
+        <label for="qlcl"></label>
+        <em>秋粮产量预报</em>
+      </span>
+      <span class="radio-box">
+        <input type="radio" id="dqqh" name="radio">
+        <label for="dqqh"></label>
+        <em>短期气候预测</em>
+      </span>
+    </div>
+  </div>
+  <span class="add-btn"></span>
+</div>
+<div class="s-list">
+  <table cellspacing="0" class="s-table table-condensed  table-bordered">
+    <thead>
+    <tr>
+      <td>标题</td>
+      <td>创建时间</td>
+      <td>状态 </td>
+      <td>类别</td>
+      <td>操作</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>2014年保德县春播专报 </td>
+      <td>2017-04-15 16:35:55</td>
+      <td>待签发</td>
+      <td>春播专报</td>
+      <td>
+        <span class="send-btn">
+        </span>
+        <span class="del-btn"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>2014年保德县春播专报 </td>
+      <td>2017-04-15 16:35:55</td>
+      <td>待签发</td>
+      <td>春播专报</td>
+      <td>
+        <span class="send-btn">
+        </span>
+        <span class="del-btn"></span>
+      </td>
+    </tr>
+    <tr>
+      <td>2014年保德县春播专报 </td>
+      <td>2017-04-15 16:35:55</td>
+      <td>待签发</td>
+      <td>春播专报</td>
+      <td>
+        <span class="send-btn">
+        </span>
+        <span class="del-btn"></span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="js/zz-main.js"></script>
+</body>
+</html>

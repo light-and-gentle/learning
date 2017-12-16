@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>七天预报</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="lipenghui"/>
+    <meta name="screen-orientation" content="portrait"> <!--规定UC浏览器强制全屏的-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1" />
+    <link type="text/css" rel="stylesheet" href="css/reset.css" />
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <script src="./js/responsive.js"></script>
+    <script type="text/javascript" src="./js/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+    <script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+
+</head>
+<body class="body_bg">
+<div class="container">
+
+    <div class="bg_top">
+        <div class="head_line">
+            <p class="title_left" id="location">
+                <img src="image/localtion2.png">忻州市
+            </p>
+            <p class="title_right" id="refresh">数据更新时间：19:27</p>
+        </div>
+        <div class="container_surface">
+            <ul>
+                <li class="tem" id="tem">30°</li>
+                <li class="container_data" ><img id="weatherImg" src="image/weatherImg/day/qing.png"></li>
+                <li class="container_data" id="weatherNow">晴</li>
+                <li class="container_data" id="temMinMax">9~20℃</li>
+            </ul>
+        </div>
+        <div class="container_weather">
+            <ul>
+                <li id="rh"><img src="image/rh.png">26%</li>
+                <li id="wind_dir"><img src="image/wind_dir.png">西南风</li>
+                <li id="wind_speed"><img src="image/wind_speed.png">2级</li>
+                <li id="visible"><img src="image/vis.png">9km</li>
+            </ul>
+        </div>
+        <div id="detail_future">
+            <div class="detail_future_grid">
+                <ul class="clearfix">
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>

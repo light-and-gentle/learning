@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市农业气象综合服务平台</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/agricultural-condition.css">
+</head>
+<body style="height:700px;" onload="setIframe()">
+<div class="title-content fs16 nq-title">
+  <i class="icon icon-h"></i><span>农情</span><i class="icon icon-j"></i><span>监测预警</span>
+</div>
+<div class="map-content" id="mapDiv"></div>
+<div class="para-info-content bt">
+  <div class="handle basics">
+    <div class="pare-title fs16">
+      基础信息
+    </div>
+    <ul class="clearfix">
+      <li>
+        <input type="checkbox" id="weather-station" onclick="stationClick(this)">
+        <label for="weather-station">气象站</label>
+
+      </li>
+      <li class="w142">
+        <input id="town" type="checkbox" />
+        <label for="town">乡（镇）政府</label>
+      </li>
+      <li>
+        <input id="river" type="checkbox" />
+        <label for="river">小河流</label>
+      </li>
+      <li>
+        <input id="ditch" type="checkbox" />
+        <label for="ditch">山洪沟</label>
+      </li>
+    </ul>
+  </div>
+  <div class="handle yujing">
+    <div class="pare-title fs16">
+      灾害预警
+    </div>
+    <ul class="clearfix">
+      <li>
+        <input type="checkbox" id="zaiqing">
+        <label for="zaiqing">灾情</label>
+      </li>
+      <li>
+        <input type="checkbox" id="warning" checked="checked" onclick="alertClick(this)">
+        <label for="warning">预警</label>
+      </li>
+      <li>
+        <input type="checkbox" id="trouble">
+        <label for="trouble">隐患点</label>
+      </li>
+      <li class="w155">
+        <input type="checkbox" id="distribution" >
+        <label for="distribution">灾害分布</label>
+      </li>
+      <li>
+        <input type="checkbox" id="zaihai">
+        <label for="zaihai">灾害点</label>
+      </li>
+      <li class="w115">
+        <input type="checkbox" id="level">
+        <label for="level">灾害等级</label>
+      </li>
+      <li class="w115">
+        <input type="checkbox" id="compartment" >
+        <label for="compartment">风险区划</label>
+      </li>
+    </ul>
+  </div>
+</div>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="http://api.tianditu.com/api?v=4.0" type="text/javascript"></script>
+<script src="js/map.js"></script>
+
+
+</body>
+</html>

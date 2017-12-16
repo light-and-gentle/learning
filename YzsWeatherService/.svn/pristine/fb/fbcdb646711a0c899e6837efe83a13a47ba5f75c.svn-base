@@ -1,0 +1,19 @@
+/**
+ * Created by mt on 2017-12-7.
+ */
+$(function () {
+  $('.classify-list-content').on('click','li',function () {
+    var recipient = $(this).data('whatever');
+    $(this).addClass('classify-active').siblings().removeClass('classify-active');
+    $('.current-classify').text(recipient)
+
+  })
+
+
+//  分页
+
+  $('#light-pagination').pagination({
+    pages: 3,
+    cssStyle: 'light-theme'
+  });
+});

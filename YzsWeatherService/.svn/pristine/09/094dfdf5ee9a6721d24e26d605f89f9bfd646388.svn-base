@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>忻州市气象服务产品制作系统</title>
+
+<meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+<meta http-equiv="description" content="this is my page">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css/login.css">
+
+</head>
+
+<body>
+	<div class="container">
+		<span class="container-span">
+		<input type="text"   class="inputStyle" id="username" /><img src="img/user.png" class="loginimg"/><br /><br/>
+		<input type="password" class="inputStyle" id="password"/><img src="img/password.png" class="loginimg"/><br/><br/>
+		<button class="login" onclick="login()">登&nbsp;&nbsp;陆</button>
+		</span>
+	</div>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+.clearFix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearFix {
+  zoom: 1; }
+
+.wrapper {
+  width: 66.7%;
+  background: #fff;
+  border-radius: 18px;
+  margin: 126px 0 224px 18.7%;
+  padding: 31px  3.13% 136px 4.4%;
+  box-shadow: 0 5px 5px #cdcdce, 0 -5px 5px #cdcdce, 5px 0 5px #cdcdce, -5px 0 5px #cdcdce; }
+  .wrapper .dialog-title .sub-title {
+    float: left;
+    font: 28px/80px 'Microsoft Yahei';
+    margin: 0; }
+  .wrapper .dialog-title .close-icon {
+    float: right;
+    top: 14px;
+    width: 40px;
+    height: 80px;
+    background: url("../images/manageImg/tanchuangguanbi.png") no-repeat center center;
+    background-position: center 14px;
+    cursor: pointer; }
+  .wrapper .dialog-wrapper {
+    padding-left: 22px; }
+    .wrapper .dialog-wrapper .subhead {
+      font: 24px/74px 'Microsoft Yahei';
+      margin: 0; }
+    .wrapper .dialog-wrapper .batch-info-tws P {
+      height: 78px;
+      margin-bottom: 12px;
+      font-size: 0; }
+    .wrapper .dialog-wrapper .asterisk {
+      display: inline-block;
+      width: 132px;
+      font: 22px/78px 'Microsoft Yahei'; }
+      @media (max-width: 1366px) {
+        .wrapper .dialog-wrapper .asterisk {
+          font-size: 20px;
+          width: 120px; } }
+      .wrapper .dialog-wrapper .asterisk:before {
+        content: '*';
+        display: inline-block; }
+    .wrapper .dialog-wrapper .set-dis {
+      width: 177px;
+      margin-left: 58px; }
+    .wrapper .dialog-wrapper .down-arrow {
+      background: url("../images/manageImg/xialajiantou.png") no-repeat center center;
+      background-position: 90% center; }
+    .wrapper .dialog-wrapper .border {
+      box-sizing: border-box;
+      width: 320px;
+      height: 30px;
+      border: 1px solid #777;
+      border-radius: 12px;
+      padding-left: 12px; }
+      @media (max-width: 1366px) {
+        .wrapper .dialog-wrapper .border {
+          width: 160px; } }
+    .wrapper .dialog-wrapper .area {
+      width: 140px;
+      margin-right: 40px; }
+      @media (max-width: 1366px) {
+        .wrapper .dialog-wrapper .area {
+          width: 70px;
+          margin-right: 20px; } }
+    .wrapper .dialog-wrapper .last-area {
+      margin: 0; }
+    .wrapper .dialog-wrapper .variety-table {
+      position: relative;
+      overflow: hidden;
+      margin-left: 125px;
+      height: 820px;
+      box-shadow: 5px 0 5px #e4e4e5, -5px 0 5px #e4e4e5, 0 -5px 5px #c9e3da, 0 5px 5px #e4e4e5;
+      border-radius: 8px; }
+      .wrapper .dialog-wrapper .variety-table table {
+        margin: 0; }
+      .wrapper .dialog-wrapper .variety-table thead {
+        background: #79cfae; }
+        .wrapper .dialog-wrapper .variety-table thead td {
+          font: 18px/40px 'Microsoft Yahei';
+          padding: 0;
+          height: 40px;
+          color: #fff;
+          text-align: center; }
+      .wrapper .dialog-wrapper .variety-table tbody tr {
+        height: 84px;
+        text-align: center; }
+        .wrapper .dialog-wrapper .variety-table tbody tr td {
+          font: 18px/84px 'Microsoft Yahei';
+          padding: 0; }
+      @media (max-width: 1366px) {
+        .wrapper .dialog-wrapper .variety-table {
+          margin-left: 100px; } }
+      .wrapper .dialog-wrapper .variety-table .serial-number {
+        display: inline-block;
+        width: 102px;
+        height: 30px;
+        border-radius: 10px;
+        background: #f3f2f2;
+        line-height: 30px; }
+      .wrapper .dialog-wrapper .variety-table .refer {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background: #f9f8f8; }
+      .wrapper .dialog-wrapper .variety-table .active {
+        border: 1px solid #777;
+        background: none; }
+    .wrapper .dialog-wrapper .magic-checkbox {
+      position: absolute;
+      display: none; }
+    .wrapper .dialog-wrapper .magic-checkbox + label {
+      position: relative;
+      display: inline-block;
+      padding-left: 28px;
+      cursor: pointer;
+      margin: 0;
+      vertical-align: middle;
+      font: 18PX/54PX 'Microsoft Yahei';
+      color: #4e4e4e; }
+      @media (max-width: 1366px) {
+        .wrapper .dialog-wrapper .magic-checkbox + label {
+          font-size: 16px; } }
+    .wrapper .dialog-wrapper .magic-checkbox + label:before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      top: 50%;
+      left: 0;
+      margin-top: -10px;
+      border: 1px solid #c0c0c0;
+      border-radius: 3px; }
+    .wrapper .dialog-wrapper .magic-checkbox:checked + label:before {
+      border-color: #79cfae;
+      background: url("../images/manageImg/gouxuan.png") no-repeat center center; }
+    .wrapper .dialog-wrapper .magic-checkbox[disabled] + label {
+      cursor: not-allowed;
+      color: #e4e4e4; }
+    .wrapper .dialog-wrapper .target-info {
+      margin-top: 10px; }
+      .wrapper .dialog-wrapper .target-info .asterisk {
+        float: left; }
+      .wrapper .dialog-wrapper .target-info .sim-check {
+        padding-top: 15px; }
+        .wrapper .dialog-wrapper .target-info .sim-check label {
+          box-sizing: border-box;
+          width: 155px;
+          float: left; }
+      .wrapper .dialog-wrapper .target-info .describe .asterisk {
+        height: 200px; }
+  .wrapper .save-btn {
+    margin: 100px auto 0;
+    width: 308px;
+    height: 52px;
+    font: 22px/52px 'Microsoft Yahei';
+    text-align: center;
+    background: #79cfae;
+    border-radius: 16px;
+    color: #fff;
+    cursor: pointer; }

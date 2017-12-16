@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市农业气象综合服务平台</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/swiper.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/agricultural-condition.css">
+</head>
+<body onload="setIframe()">
+  <!--<div class="main-content">-->
+    <div class="content-top clearfix">
+      <div class="select-area">
+        <div class="qx">
+          <span class="current-area">区县选择</span>
+          <i class="qx-icon triangle-down"></i>
+        </div>
+        <div class="area-content">
+          <ol>
+            <li class="area-active" onclick="cityChange('保德县')">保德县</li>
+            <li onclick="cityChange('定襄县')">定襄县</li>
+            <li onclick="cityChange('代县')">代县</li>
+            <li onclick="cityChange('繁峙县')">繁峙县</li>
+            <li onclick="cityChange('河曲县')">河曲县</li>
+            <li onclick="cityChange('静乐县')">静乐县</li>
+            <li onclick="cityChange('岢岚县')">岢岚县</li>
+            <li onclick="cityChange('宁武县')">宁武县</li>
+            <li onclick="cityChange('偏关县')">偏关县</li>
+            <li onclick="cityChange('神池县')">神池县</li>
+            <li onclick="cityChange('五台县')">五台县</li>
+            <li onclick="cityChange('五寨县')">五寨县</li>
+            <li onclick="cityChange('原平市')">原平市</li>
+          </ol>
+        </div>
+      </div>
+      <div class="zd-content">
+        <div class="arrow arrow-l"></div>
+        <div class="zd-name-content">
+          <ul class="zd-name">
+            <li data-sid='53660' class='zd-active'>保德</li>
+          </ul>
+        </div>
+        <div class="arrow arrow-r"></div>
+      </div>
+
+    </div>
+    <div class="sub-content">
+      <div class="content product-content clearfix">
+        <div class="content-l bt">
+          <div class="title-content">
+            <h2 class="sub-title fl">农业概况</h2>
+          </div>
+          <div class="info-content bs">
+            <div class="detail-content feature clearfix">
+              <div class="feature-text fl">
+                <h2 class="nq-cp-title">区县特色</h2>
+                <div class="detail-info" id="feature">
+                  保德县隶属于山西省忻州市，地处吕梁山北段西坡、黄土高原东部边缘地带，属典型的温带大陆性气候，水陆两路连通四面八方，神朔铁路、神保线二级公路、沿黄干线公路、忻保高速穿境而过，是晋西北与陕西、内蒙联系的重要纽带。南北长约45公里，东西宽约21.7公里，总面积为997.4平方公里。2010年，保德县共有4个镇、9个乡、343个行政村、383个自然村，人口160035人。 2002年、2004年、2008年，保德县三度跻身县域经济基本竞争力提升速度最快的“全国百强县”。
+                </div>
+              </div>
+              <div class="feature-img fr">
+                <img src="img/qxcp.png" alt="">
+              </div>
+            </div>
+            <div class="detail-content">
+              <h2 class="nq-cp-title">农业发展现状</h2>
+              <div class="detail-info" id="actuality">
+               2013年1月到10月，全县生猪存栏3.5万头，牛存栏0.3万头，羊存栏9.6万只，家禽存栏21万只，肉类总产0.24万吨，禽蛋总产0.15万吨，奶类总产180吨，畜牧业总产值1.5亿元。<br/>
+2013年1月到11月，保德县设施农业总面积达到3675亩，总产值达到0.6亿元，2014年将继续打造5个百亩园区、10个五十亩园区，投资1亿元的繁庄塔千亩园区建成投入运营。“两红”种植面积已发展到10万余亩，农产品加工厂40余家。
+              </div>
+            </div>
+            <div class="detail-content">
+              <h2 class="nq-cp-title">未来发展目标</h2>
+              <div class="detail-info" id="future">
+               将继续坚持把发展产业作为脱攻坚的核心举措,抓特色产业和抓龙头企业并举,以“4个1000万”特惠补助为重点，即：退耕还林特惠补助1000万、特色养殖补助1000万、经济林种植补贴1000万、扶贫领域科技创新补贴1000万，强力助推产业发展。
+              </div>
+            </div>
+            <div class="detail-content">
+              <h2 class="nq-cp-title">地理位置</h2>
+              <div class="detail-info">
+                <div class="area-map-content" id="cityMap" ></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="content-r">
+          <div class="device-state bt">
+            <div class="title-content">
+              <h2 class="sub-title">种养殖分布图</h2>
+            </div>
+            <div class="yz-distribution">
+              <img src="img/fbt.png" alt="" id="plant" class="check-btn">
+            </div>
+          </div>
+          <div class="live-monitoring bt mt18">
+            <div class="title-content">
+              <h2 class="sub-title">农产品价格</h2>
+            </div>
+            <div class="price-content bs">
+              <table cellspacing="0" cellpadding="0" class="price-table">
+                <thead>
+                <tr>
+                  <th>品种</th>
+                  <th>价格（元/斤）</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>南瓜</td>
+                  <td>1.5</td>
+                </tr>
+                <tr>
+                  <td>白菜</td>
+                  <td>0.4</td>
+                </tr>
+                <tr>
+                  <td>辣椒</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>土豆</td>
+                  <td>0.5</td>
+                </tr>
+                <tr>
+                  <td>西红柿</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>大蒜</td>
+                  <td>1.95</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+          <div class="site-appearance bt mt18">
+            <div class="title-content">
+              <h2 class="sub-title">农业气候区划</h2>
+            </div>
+            <div class="qh-distribution bs">
+              <img src="img/qiht.png" alt="" id="agrometeorological" class="check-btn">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--</div>-->
+  <div class="zhezhao"></div>
+  <div class="tanchu">
+    <div class="img-show-content">
+      <img src="img/fbt.png" alt="" id="zhanshi">
+    </div>
+  </div>
+
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="js/qx-microclimate.js"></script>
+<script src="http://api.tianditu.com/api?v=4.0" type="text/javascript"></script>
+<script src="js/nq-area-products.js"></script>
+</body>
+</html>

@@ -1,0 +1,237 @@
+/*气象观测*/
+.weather-content{
+	padding: 5px 40px 0;
+}
+.today{
+	height: 269px;
+}
+.today .sk i,
+.therm{
+	background-image: url(../img/iconall.png);
+	background-repeat: no-repeat;
+	display: block;
+}
+.sk{
+	float: left;
+	width: 34%;
+	height: 100%;
+	position: relative;
+	background-color: #ffffff;
+	border-radius: 4px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.35);
+}
+.time{
+	position: absolute;
+	left: 26px;
+	top: 13px;
+	font-size: 13px;
+	color: #7e7e7e;
+}
+.zs{
+	position: absolute;
+}
+.zs i {
+	float: left;
+	height: 24px;
+	margin-right: 8px;
+	width: 24px;
+}
+.zs span {
+	float: left;
+	font-size: 16px;
+	letter-spacing: 0;
+	margin-right: 8px;
+}
+.zs em {
+	float: left;
+	font-size: 16px;
+}
+.h{
+	left: 24px;
+	top: 214px;
+}
+.h i {
+	background-position: -2px -289px;
+}
+.w {
+	left: 200px;
+	top: 213px;
+}
+.w i {
+	background-position: -36px -291px;
+}
+.today .sk .tem{
+	color: #2d76b6;
+	left: 149px;
+	position: absolute;
+	top: 102px;
+}
+.today .sk .tem span {
+	font-size: 62px;
+}
+.today .sk .tem em {
+	font-size: 50px;
+}
+.therm {
+	background-position: 0 0;
+	height: 132px;
+	left: 62px;
+	position: absolute;
+	top: 61px;
+	width: 76px;
+}
+.therm p {
+	bottom: 35px;
+	left: 35px;
+	position: absolute;
+	width: 15px;
+}
+.therm p .t {
+	background-position: -35px -137px;
+	height: 8px;
+	width: 15px;
+}
+.therm p .c {
+	background-position: -35px -142px;
+	height: 38px;
+	width: 15px;
+}
+.today ul {
+	position: relative;
+	float: left;
+	width: 30%;
+	height: 100%;
+	z-index: 0;
+}
+.today ul li{
+	position: relative;
+	float: left;
+	width: 47%;
+	height: 100%;
+	margin-left: 7px;
+	font-size: 14px;
+	text-align: center;
+	background-color: #ffffff;
+	border-radius: 4px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.35);
+}
+.today ul li h1 {
+	font-size: 13px;
+	margin-top: 14px;
+	line-height: 18px;
+}
+div.jpg80{
+	height: 80px;
+	width: 80px;
+	margin: 0 auto;
+	background-size: cover;
+}
+.n00{
+	background: url("../wIcon/0.png") no-repeat;
+}
+.n01{
+	background: url("../wIcon/1.png") no-repeat;
+}
+.wea {
+	height: 36px;
+	line-height: 18px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding-top: 0;
+	width: 88%;
+}
+.sky {
+	z-index: 2;
+	margin-top: 10px;
+	position: relative;
+	width: 100%;
+	height: 22px;
+}
+.today ul li .tem {
+	color: #7f7f7f;
+	margin-top: 10px;
+	line-height: 30px;
+}
+.today ul li .tem span {
+	font-size: 36px;
+}
+.today ul li .tem em {
+	font-size: 24px;
+}
+.today ul li .win {
+	display: inline-block;
+	height: 20px;
+	line-height: 20px;
+	margin-top: 7px;
+	overflow: hidden;
+	text-align: center;
+}
+.today ul li .win i {
+	display: inline-block;
+	float: left;
+	height: 25px;
+	width: 24px;
+}
+.win i.NW{
+	background: url("../dataImg/f319.png") no-repeat;
+}
+.win i.SE{
+	background: url("../dataImg/f126.png") no-repeat;
+}
+.show-img{
+	float: right;
+	width: 35.55%;
+	height: 100%;
+	border-radius: 4px;
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.35);
+}
+.show-img img{
+	width: 100%;
+	height: 100%;
+	border-radius: inherit;
+}
+.tab-content{
+	box-sizing: border-box;
+	width: 100%;
+	/*height: 520px;*/
+	margin-top: 22px;
+	background: #fff;
+	border-top: solid 3px #009577;
+}
+.tab-pane{
+	width: 100%;
+	padding: 0 14px;
+	font-size: 16px;
+	line-height: 45px;
+	font-weight: bold;
+	color: #666;
+	border-bottom: solid 2px #f2f2f2;
+}
+.tab-pane li{
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 0 16px;
+	cursor: pointer;
+}
+.tab-pane li:hover,
+.tab-pane .tab-active{
+	background: #b2b2b2;
+	color: #fff;
+	border-left: solid 1px #f2f2f2;
+	border-right: solid 1px #f2f2f2;
+}
+.chart-content{
+	padding: 0 14px;
+	margin-top: 40px;
+	height: 370px;
+}
+.chart-info{
+	width: 100%;
+	height: 100%;
+
+}
+@media only screen and (max-width: 1366px) {
+	.tab-content{
+		/*height: 370px;*/
+	}
+}

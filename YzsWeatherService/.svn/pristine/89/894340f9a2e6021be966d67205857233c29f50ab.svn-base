@@ -1,0 +1,241 @@
+/**
+ * create by gc on 2017-12-5.
+ */
+$(function (){
+    byHour();
+    byMinute();
+    parent.setIframe(window.parent.document.getElementById("subpage"));
+    //获取请求的参数
+    var url = location.search;
+    //console.log(url);
+    //拆分参数
+    var a=url.split("&");
+    //console.log(a);
+    //获取要查找的列
+    var typeCoulon=a[0].split("=")[1];
+    console.log(typeCoulon);
+   $("[data-type='"+typeCoulon+"']").addClass("param-active").siblings().removeClass("param-active");
+    //console.log(typeCoulon);
+    //获取要查找得我
+    var addr = a[1].split("=")[1];
+    console.log(decodeURIComponent(addr)+"县");
+    iniStation(decodeURIComponent(addr)+"县");
+    //console.log(mac)
+    var mac = $(".area-active").data("sid");
+    var getTime= get60Minute();
+    getMinute(mac,typeCoulon,getTime.beginTime,getTime.endTime);
+    var getTime1 = get10Hour();
+    getBy10Day(mac,typeCoulon,getTime1.beginTime,getTime1.endTime);
+
+});
+function goToBack() {
+    console.log("进入goToBack方法")
+    var mac = $(".area-active").data("sid");
+    var typeCoulon = $(".param-active").data("type");
+    var getTime= get60Minute();
+    getMinute(mac,typeCoulon,getTime.beginTime,getTime.endTime);
+    var getTime1 = get10Hour();
+    getBy10Day(mac,typeCoulon,getTime1.beginTime,getTime1.endTime);
+}
+
+
+function getMinute(mac,colume,beginTime,endTime){
+    //console.log("mac:"+mac+"     colume:"+colume+"   begin:"+beginTime+"  end:"+endTime);
+    var a;
+    $.ajax({
+        url: "http://" + base + "/smart/query-by-mac-and-time",
+        data: {
+            colume:colume,
+            mac:  mac,
+            beginTime: beginTime,
+            endTime: endTime,
+            token:"c372adf83d67bb21b8e7767e923ec0fc"
+        },
+        dataType: "JSON",
+        success: function (data) {
+         //   console.log("查询回来的结果")
+            console.log(data)
+            //设置取值的列名
+            if(colume=="10st"){
+                colume="st10"
+            }else if (colume == "10sh"){
+                colume = "sh10";
+            }
+            var getdata = new Array(data.length);
+            var getTime = new Array(data.length);
+            for (var i = 0 ;i <data.length;i++){
+                getdata[i]=data[i][colume] -0;
+                getTime[i]=data[i].datatime +'';
+            }
+            option2.xAxis[0].data=getTime;
+            option2.series[0].data=getdata;
+           // console.log(getdata);
+           // console.log(option2.xAxis.data,getTime);
+            if (colume == "temp"){
+                //温度
+                option2.yAxis[0].axisLabel.formatter= '{value} °C';
+            }else if (colume == "rh"){
+                //湿度
+                option2.yAxis[0].axisLabel.formatter= '{value} %';
+            }else if(colume == "st10"){
+                //土壤温度
+                option2.yAxis[0].axisLabel.formatter= '{value} °C';
+            }else if(colume == "sh10"){
+                //土壤湿度
+                option2.yAxis[0].axisLabel.formatter= '{value} %';
+            }else if(colume == "fainfall"){
+                //雨量
+                option2.yAxis[0].axisLabel.formatter= '{value} mm';
+            }else if(colume == "pressure"){
+                //气压
+                option2.yAxis[0].axisLabel.formatter= '{value} hpa';
+            }else if(colume == "effradiation"){
+                //光合有效辐射
+                option2.yAxis[0].axisLabel.formatter= '{value} W/㎡';
+            }else if(colume == "windspecd"){
+                //风速
+                a=getdata;
+                option2.yAxis[0].axisLabel.formatter= '{value} m/s';
+            }else if(colume == "winddir"){
+                //风向
+                //option1.yAxis[0].axisLabel.formatter= '{value} ';
+            }
+            myChart2.setOption(option2);
+            console.log("已生效")
+        }
+    })
+    if(colume == "windspecd"){
+        $.ajax({
+            url: "http://" + base + "/smart/query-by-mac-and-time",
+            data: {
+                colume: "winddir",
+                mac: mac,
+                beginTime: beginTime,
+                endTime: endTime,
+                token: "c372adf83d67bb21b8e7767e923ec0fc"
+            },
+            dataType: "JSON",
+            success: function (data) {
+                var getdata = new Array(data.length);
+                for (var i = 0 ;i <data.length;i++){
+                    var a1 = ""+data[i].winddir;
+                    var b = a1.split(".",1);
+                    getdata[i]={value:a[i],symbol:"image://dataImg/f"+b+".png"}
+                }
+                console.log(getdata);
+                option2.series[0].data=getdata;
+                myChart2.setOption(option2);
+            }
+        });
+    }
+
+}
+
+function getBy10Day(mac,colume,beginTime,endTime){
+    var a;
+    $.ajax({
+      url: "http://" + base + "/smart/query-by-mac-and-time-on-hour",
+      data: {
+        colume:colume,
+        mac:  mac,
+        beginTime: beginTime,
+        endTime: endTime,
+        token:"c372adf83d67bb21b8e7767e923ec0fc"
+      },
+      dataType: "JSON",
+      success: function (data) {
+          if(colume=="10st"){
+              colume="st10"
+          }else if (colume == "10sh"){
+              colume = "sh10";
+          }
+          var getdata = new Array(data.length);
+          var getTime = new Array(data.length);
+          for (var i = 0 ;i <data.length;i++){
+              getdata[i]=data[i][colume] -0;
+              getTime[i]=data[i].datatime +'';
+          }
+          option1.xAxis[0].data=getTime;
+          option1.series[0].data=getdata;
+          //console.log(getdata);
+          //console.log(option1.xAxis.data,getTime);
+          if (colume == "temp"){
+              //温度
+              option1.yAxis[0].axisLabel.formatter= '{value} °C';
+          }else if (colume == "rh"){
+              //湿度
+              option1.yAxis[0].axisLabel.formatter= '{value} %';
+          }else if(colume == "st10"){
+              //土壤温度
+              option1.yAxis[0].axisLabel.formatter= '{value} °C';
+          }else if(colume == "sh10"){
+              //土壤湿度
+              option1.yAxis[0].axisLabel.formatter= '{value} %';
+          }else if(colume == "fainfall"){
+              //雨量
+              option1.yAxis[0].axisLabel.formatter= '{value} mm';
+          }else if(colume == "pressure"){
+              //气压
+              option1.yAxis[0].axisLabel.formatter= '{value} hpa';
+          }else if(colume == "effradiation"){
+              //光合有效辐射
+              option1.yAxis[0].axisLabel.formatter= '{value} W/㎡';
+          }else if(colume == "windspecd"){
+              //风速
+              a=getdata;
+              option1.yAxis[0].axisLabel.formatter= '{value} m/s';
+          }else if(colume == "winddir"){
+              //风向
+              //option1.yAxis[0].axisLabel.formatter= '{value} ';
+          }
+          myChart1.setOption(option1);
+          console.log("已生效")
+
+      }
+    });
+    if(colume == "windspecd") {
+        $.ajax({
+            url: "http://" + base + "/smart/query-by-mac-and-time-on-hour",
+            data: {
+                colume: "winddir",
+                mac: mac,
+                beginTime: beginTime,
+                endTime: endTime,
+                token: "c372adf83d67bb21b8e7767e923ec0fc"
+            },
+            dataType: "JSON",
+            success: function (data) {
+                var getdata = new Array(data.length);
+                for (var i = 0; i < data.length; i++) {
+                    var a1 = "" + data[i].winddir;
+                    var b = a1.split(".", 1);
+                    getdata[i] = {value: a[i], symbol: "image://dataImg/f" + b + ".png"}
+                }
+                console.log(getdata);
+                option1.series[0].data = getdata;
+                myChart1.setOption(option1);
+            }
+        });
+    }
+}
+
+//获取十天的起止时间
+function get10Hour() {
+  var endTime = new Date();
+  var longTime = endTime.getTime();
+  longTime = longTime-(1000*60*60*24*10);
+  var beginTime= new Date(longTime);
+  console.log(beginTime);
+  return {beginTime:beginTime,endTime:endTime}
+}
+
+//获取一小时逐分钟起止时间
+function get60Minute() {
+    var endTime = new Date();
+    var longTime=endTime.getTime();
+    longTime=longTime-(1000*60*60);
+    var beginTime = new Date(longTime);
+    return {beginTime:beginTime,endTime:endTime}
+}
+
+

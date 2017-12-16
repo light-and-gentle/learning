@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市气象服务产品制作系统</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/main.css">
+
+
+</head>
+<body>
+<header class="header s-header clearfix">
+  <h1 class="logo">
+    <img src="img/s-logo.png" alt="">
+  </h1>
+  <nav class="menu-nav s-menu-nav">
+    <a class="menu-nav-active" href="javascript:void (0);" target="_self" data-whatever="clzz">材料制作</a>
+    <a href="javascript:void (0);" target="_self" data-whatever="cpfw">产品服务</a>
+    <a href="javascript:void (0);" target="_self" data-whatever="zqsh">灾情审核</a>
+  </nav>
+</header>
+
+<section class="warp s-warp clearfix">
+  <aside class="sidebar s-sidebar qx-sidebar">
+    <img src="img/s-top.png" alt="">
+    <!--材料制作-->
+    <ul class="s-menu-sidebar" id="clzz" style="display: block">
+      <li class="s-menu-sidebar-active" data-whatever="zz-compile">
+        <i class="icon-zx"></i><a href="javascript:void (0);">撰&nbsp;写</a>
+      </li>
+      <li class="facility" data-whatever="zz-issue">
+        <i class="icon-fb"></i><a href="javascript:void (0);">发&nbsp;布</a>
+      </li>
+      <li data-whatever="zz-consult">
+        <i class="icon-dy"></i><a href="javascript:void (0);">调&nbsp;阅</a>
+      </li>
+    </ul>
+
+    <!--产品服务-->
+    <ul class="s-menu-sidebar" id="cpfw">
+      <li data-whatever="">
+        <h2>
+          <i class="icon-qb"></i><span>农气情报</span><i class="mark"></i>
+        </h2>
+        <ul>
+          <li class="sub-active" data-whatever="cp-service">旬报</li>
+          <li data-whatever="cp-service">春播专报</li>
+          <li data-whatever="cp-service">秋收秋种</li>
+          <li data-whatever="cp-service">干旱监测信息</li>
+          <li data-whatever="cp-service">气候影响评价</li>
+        </ul>
+      </li>
+      <li class="s-menu-sidebar-active" data-whatever="">
+        <h2>
+          <i class="icon-yb"></i><span>农气预报</span><i class="mark "></i>
+        </h2>
+        <ul>
+          <li data-whatever="cp-service">天气预报</li>
+          <li data-whatever="cp-service">农用天气预报</li>
+          <li data-whatever="cp-service">秋粮产量预报</li>
+          <li data-whatever="cp-service">短期气候预测</li>
+        </ul>
+      </li>
+    </ul>
+    <!--灾情审核-->
+    <ul class="s-menu-sidebar" id="zqsh">
+      <li class="s-menu-sidebar-active" data-whatever="zq-check"><i></i><a href="javascript:void (0);">审&nbsp;核</a></li>
+      <li class="s-menu-sidebar-active" data-whatever="zq-check"><i></i><a href="javascript:void (0);">调&nbsp;阅</a></li>
+    </ul>
+
+    <img class="img-s-bottom" src="img/s-bottom.png" alt="">
+  </aside>
+  <iframe class="main-content s-main-content" id="subpage" src=" " frameborder="0" scrolling="no">
+
+  </iframe>
+</section>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="js/zz-main.js"></script>
+</body>
+</html>

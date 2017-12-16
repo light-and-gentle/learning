@@ -1,0 +1,48 @@
+var map;
+$(function(){
+	init();
+});
+
+/**
+ * 初始化地图
+ */
+function init(){
+      var zoom = 9;
+      map = new T.Map('mapDiv');
+      map.centerAndZoom(new T.LngLat(112.3819,38.89317), zoom);
+      area('忻州市');
+}
+
+/**
+ * 解析行政区划边界
+ */
+function area(name) {
+	var localsearch = new T.LocalSearch(map, {
+		onSearchComplete : localSearchResult
+	});
+	localsearch.search(name);
+	function localSearchResult(result) {
+		if (result.getArea()) {
+				var pointsArr = [];
+				var points = result.getArea().points;
+				for ( var i = 0; i < points.length; i++) {
+					var regionArr = points[i].region.split(",");
+					for ( var m = 0; m < regionArr.length; m++) {
+						var lnglatArr = regionArr[m].split(" ");
+						var lnglat = new T.LngLat(lnglatArr[0], lnglatArr[1]);
+						pointsArr.push(lnglat);
+					}
+				}
+				 var polygon = new T.Polygon(pointsArr, {
+					 	color : "#242424",
+						weight : 2,
+						fillOpacity:0,
+						opacity : 1,
+						lineStyle : "dashed",
+						name:name
+				}); 
+				map.addOverLay(polygon);
+		}
+	}
+}
+

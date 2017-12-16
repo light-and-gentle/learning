@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>蔬菜品评监控系统</title>
+    <meta name="description" content="{description}" />
+    <meta name="keywords" content="{keywords}" />
+    <link rel="stylesheet" href="assets/scss/reset.css">
+    <link rel="stylesheet" href="assets/scss/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="css/layout.css"/>
+    
+<link rel="stylesheet" href="css/batch.css" />
+
+</head>
+<body>
+    <div class="functional">
+        <div class="title">蔬菜品评监控系统</div>
+        <div class="fun-btn">
+            <i class="icon computer"></i>
+            <i class="icon setting"></i>
+            <i class="icon switch"></i>
+        </div>
+        <div class="userinfo">
+            <div class="avatar"><img src="" alt=""></div>
+            <div class="login-info">
+                <div class="user">
+                    <span class="user-name">admin,</span>
+                    <span>欢迎你</span>
+
+                </div>
+                <p class="data-time">
+                    <span>2017年3月30日</span>
+                    <span>20:00</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="main">
+        <div class="box">
+            <div class="sidebar ">
+                <div class="fold-icon" id="fold"></div>
+                <div class="side-title-wrapper">
+                    <h2 class="side-title">导航菜单</h2>
+                </div>
+
+                <ul class="side-nav">
+                    <li class="side-info active">
+                        <i class="side-icon variety "></i>
+                        <h2 class="side-tit"> 品种信息管理</h2>
+                        <ul class="side-con">
+                            <li class="current item-hook" data-name="index">品种管理</li>
+                            <li class="item-hook" data-name="batch">评价批次管理</li>
+                        </ul>
+                    </li>
+                    <li class="side-info">
+                        <i class="side-icon collect"></i>
+                        <h2 class="side-tit">采集指标管理</h2>
+                        <ul class="side-con">
+                            <li class="item-hook" data-name="collection">指标库管理</li>
+                        </ul>
+
+                    </li>
+                    <li class="side-info">
+                        <i class="side-icon  img-info"></i>
+                        <h2 class="side-tit">图像信息管理</h2>
+                        <ul class="side-con">
+                            <li class="item-hook">实时监控影像</li>
+                            <li class="item-hook">历史监控截图</li>
+                        </ul>
+                    </li>
+                    <li class="side-info">
+                        <i class="side-icon env"></i>
+                        <h2 class="side-tit">环境信息管理</h2>
+                        <ul class="side-con">
+                            <li class="item-hook">空气温度</li>
+                            <li class="item-hook">空气湿度</li>
+                            <li class="item-hook">土壤温度</li>
+                            <li class="item-hook">土壤湿度</li>
+                            <li class="item-hook">光辐射照度</li>
+                            <li class="item-hook">CO2浓度</li>
+                            <li class="item-hook">土壤PH值</li>
+                            <li class="item-hook">土壤EC值</li>
+                        </ul>
+
+                    </li>
+                    <li class="side-info">
+                        <i class="side-icon analyze"></i>
+                        <h2 class="side-tit">综合评价分析</h2>
+                        <ul class="side-con">
+                            <li class="item-hook">单批次评价</li>
+                            <li class="item-hook">评价展示设置</li>
+                            <li class="item-hook">多批次评价</li>
+                            <li class="item-hook">过往报告</li>
+                            <li class="item-hook">关注度/喜好</li>
+                        </ul>
+
+                    </li>
+                    <li class="side-info">
+                        <i class="side-icon sys-setting"></i>
+                        <h2 class="side-tit">系统设置</h2>
+                        <ul class="side-con">
+                            <li class="item-hook">用户设置</li>
+                            <li class="item-hook">硬件关联配置</li>
+                        </ul>
+
+                    </li>
+                    <li class="side-info">
+                        <i class="side-icon dictionary"></i>
+                        <h2 class="side-tit">数据字典</h2>
+                        <ul class="side-con">
+                            <li class="item-hook">蔬菜主分类</li>
+                            <li class="item-hook">站点字典</li>
+                            <li class="item-hook">总部摄像头</li>
+                            <li class="item-hook">总部传感器</li>
+                            <li class="item-hook">地区字典</li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="main-content">
+            
+<div class="batch-content">
+    <div class="content-head clearFix">
+        <h2 class="content-title">
+            评价批次管理
+        </h2>
+        <div class="create-batch">
+            新建评价批次
+        </div>
+    </div>
+    <div class="batch-list">
+        <table cellspacing="0" class="table table-condensed  table-bordered">
+            <thead>
+            <tr>
+                <td>评价批次ID</td>
+                <td>分类</td>
+                <td>评价开始时间</td>
+                <td>评价结束时间</td>
+                <td>评价地点</td>
+                <td>状态</td>
+                <td>操作</td>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td>详情</td>
+            </tr>
+            <tr>
+                <td>20170202BJ </td>
+                <td>黄瓜</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>2017.02.02 15:20:00</td>
+                <td>北京通州区</td>
+                <td>已完结</td>
+                <td>详情</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="page-btn">
+        <span class="prev">上页</span>
+        <span class="nun-btn nun-active">1</span>
+        <span class="nun-btn">2</span>
+        <span class="nun-btn">3</span>
+        <span class="next">下页</span>
+    </div>
+</div>
+
+        </div>
+    </div>
+    <script src="assets/js/jquery-2.2.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="js/base.js"></script>
+    
+    
+</body>
+</html>

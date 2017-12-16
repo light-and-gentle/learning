@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市气象服务产品制作系统</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/simplePagination.css">
+  <link rel="stylesheet" href="css/material-producing.css">
+</head>
+<body>
+<div class="s-top clearfix">
+  <div class="category ">
+    <!--<em>类&nbsp;别：</em>-->
+    <span class="lb-active">全&nbsp;部</span>
+    <p>
+      <em>农气情报：</em>
+      <span>旬&nbsp;报</span>
+      <span>春播专报</span>
+      <span>秋收秋种</span>
+      <span>干旱监测信息</span>
+      <span>气候影响评价</span>
+    </p>
+    <p>
+      <em>农气预报：</em>
+      <span>天气预报</span>
+      <span>农用天气预报</span>
+      <span>秋粮产量预报</span>
+      <span>短期气候预测</span>
+    </p>
+    <p>
+      <em>其&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;他：</em>
+      <span>农气科普</span>
+      <span> 农技知识</span>
+    </p>
+  </div>
+</div>
+<div class="s-list">
+  <table cellspacing="0" class="s-table">
+    <thead>
+    <tr>
+      <td>标题</td>
+      <td>创建时间</td>
+      <td>状态 </td>
+      <td>类别</td>
+      <td>操作</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr title="1234">
+      <td>2014年保德县春播专报 </td>
+      <td>2017-04-15 16:35:55</td>
+      <td>待发布</td>
+      <td>春播专报</td>
+      <td>
+        <span class="share-btn" title="分享">
+        </span>
+        <span class="del-btn" title="删除"></span>
+      </td>
+    </tr>
+    <tr title="">
+      <td>2014年保德县春播专报 </td>
+      <td>2017-04-15 16:35:55</td>
+      <td>待发布</td>
+      <td>春播专报</td>
+      <td>
+        <span class="share-btn" title="分享">
+        </span>
+        <span class="del-btn" title="删除"></span>
+      </td>
+    </tr>
+    <tr title="">
+      <td>2014年保德县春播专报 </td>
+      <td>2017-04-15 16:35:55</td>
+      <td>待发布</td>
+      <td>春播专报</td>
+      <td>
+        <span class="share-btn" title="分享">
+        </span>
+        <span class="del-btn" title="删除"></span>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <div class="page-content">
+    <div class="pagination-holder clearfix">
+      <div id="light-pagination" class="pagination clearfix"></div>
+    </div>
+  </div>
+</div>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/jquery.simplePagination.js"></script>
+<script src="js/zz-main.js"></script>
+<script src="js/material-producting.js"></script>
+<script>
+  //  分页
+  $('#light-pagination').pagination({
+    items: 100,
+    itemsOnPage: 10,
+    cssStyle: 'light-theme'
+  });
+</script>
+</body>
+</html>

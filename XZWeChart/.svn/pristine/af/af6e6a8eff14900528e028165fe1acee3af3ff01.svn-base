@@ -1,0 +1,11 @@
+/**
+ * Created by mt on 2017-12-15.
+ */
+$(function () {
+
+//  scrollbar
+  $(".qx-list-content").mCustomScrollbar({
+    theme:"minimal"
+  });
+
+})

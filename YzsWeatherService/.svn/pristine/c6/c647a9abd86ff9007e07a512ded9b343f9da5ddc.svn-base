@@ -1,0 +1,47 @@
+var base = "192.168.1.113:20010";
+
+function getSurfaceData(obj){
+    $.ajax({
+        url: "http://" + base + "/surface_data/search",
+        data: "station=" + obj + "&token=c372adf83d67bb21b8e7767e923ec0fc",
+        //type:"post",
+        dataType: "JSON",
+        success: function (data) {
+            console.log(data)
+            //温度
+            temp(data.temp/10,1);
+            //空气湿度
+            rh(data.rh,1);
+            //1小时降雨量
+            fainFall(data.r1,1);
+            //气压
+            pre(data.press/10,1);
+            //风速
+            winds(data.windSpeed10/10,1)
+            //风向
+            var a=data.windDir10/3.6;
+            windDir(a,1);
+            //设置传感器
+            $(".device-name").html(data.station);
+            //数据入库时间
+            var date= new Date(data.updateTime);
+            var s=""+date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate() +" "+date.getHours()+":"+date.getMinutes()+":"+date.getSeconds()
+            $(".update-time span").html(s);
+            //以下数据暂无
+            st(34,0);
+            sh(40,0);
+            eff(20,0);
+
+        }
+    });
+   /* $.ajax({
+        url: "http://" + base + "/smart/query-by-mac",
+        data: "mac=" + obj + "&token=c372adf83d67bb21b8e7767e923ec0fc",
+        //type:"post",
+        dataType: "JSON",
+        success: function (data) {
+            console.log(data);
+
+        }
+    });*/
+}

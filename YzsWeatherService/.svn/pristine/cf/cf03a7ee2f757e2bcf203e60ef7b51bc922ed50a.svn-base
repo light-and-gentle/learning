@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <title>忻州市农业气象综合服务平台</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/simplePagination.css">
+  <link rel="stylesheet" href="css/agroclimate.css">
+</head>
+<body onload="setIframe()" style="height: 629px;">
+<div class="info-content">
+  <div class="info-list mt18">
+    <div class=" title-content info-title-content clearfix">
+      <div class="info-title nq-title fs16 fl">
+        <i class="icon icon-h"></i>
+        <span>农气</span>
+        <i class="icon icon-j"></i>
+        <span>农气科普</span>
+      </div>
+    </div>
+
+    <ul class="info-doc-list">
+      <li>
+        <span onclick="show('忻州市春耕春播气象服务专报2017第5期')">忻州市春耕春播气象服务专报2017第5期 </span>
+        <span class="time">2017-03-11</span>
+      </li>
+    </ul>
+  </div>
+
+</div>
+
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/jquery.simplePagination.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/main.js"></script>
+<script src="js/nqi-information.js"></script>
+<script type="text/javascript">
+function show(name){
+	location.href="http://doc.fw121.com/?furl=http://39.104.56.35:12001/static/word/"+name+".doc";	
+
+}
+
+</script>
+</body>
+</html>

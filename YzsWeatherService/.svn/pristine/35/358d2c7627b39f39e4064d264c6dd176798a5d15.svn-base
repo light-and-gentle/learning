@@ -1,0 +1,33 @@
+/**
+ * Created by mt on 2017-11-28.
+ */
+
+$(function () {
+  //获取请求参数
+  var searchStr = location.search;
+  var a=searchStr.split("=");
+  var b=a[1];
+  $('.menu-nav a').removeClass("menu-nav-active").eq(b).addClass("menu-nav-active");
+  var ulId = $('.menu-nav-active').data('whatever');
+  $('#'+ulId).show().siblings('ul').hide();
+  $('.sidebar img').attr('src','../img/'+ulId+'.png');
+  var iframeSrc = $('#'+ulId+ ' li').eq(0).data('whatever');
+  $('iframe.main-content').attr('src', iframeSrc+'.html');
+  $('#'+ulId).on('click','li',function () {
+    var recipient = $(this).data('whatever');
+    if(recipient !==''){
+      $('iframe.main-content').attr('src', recipient+'.html')
+    }
+    $(this).addClass('menu-sidebar-active').siblings().removeClass('menu-sidebar-active')
+  });
+  $('.area-content').on('click', 'li', function () {
+    $('.area-content ol li').removeClass("area-active");
+    $(this).addClass("area-active");
+    var textVal = $(this).text();
+    $(".qx-icon").removeClass('triangle-up').addClass('triangle-down');
+    $(".select-area .current-area").text(textVal);
+    $(".select-area .area-content").hide(500);
+    //根据所选区，读取小气候站点
+    iniStation(textVal);
+  });
+});

@@ -1,0 +1,232 @@
+.clearFix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+
+.clearFix {
+  zoom: 1; }
+
+.dialog-box {
+  width: 66.7%;
+  background: #fff;
+  border-radius: 18px;
+  margin: 126px 0 224px 18.7%;
+  padding: 0  0 136px 5%;
+  box-shadow: 0 5px 5px #cdcdce,0 -5px 5px #cdcdce,5px 0 5px #cdcdce, -5px 0 5px #cdcdce; }
+  .dialog-box .sub-title {
+    display: inline-block;
+    margin: 0;
+    font-size: 28px;
+    line-height: 120px; }
+  .dialog-box .close-icon {
+    float: right;
+    width: 40px;
+    height: 120px;
+    margin-right: 2.65%;
+    background: url("../images/manageImg/tanchuangguanbi.png") no-repeat center center;
+    cursor: pointer; }
+  .dialog-box .species-info {
+    height: 84px;
+    font-size: 0;
+    line-height: 84px; }
+    .dialog-box .species-info div {
+      display: inline-block;
+      font-size: 22px;
+      vertical-align: middle; }
+    .dialog-box .species-info .common-border {
+      box-sizing: border-box;
+      width: 9.7%;
+      height: 34px;
+      border-radius: 12px;
+      padding-left: 16px;
+      margin: 0 60px 0 36px;
+      border: 1px solid #777;
+      font: 18px/34px "Microsoft Yahei"; }
+    .dialog-box .species-info #divselect {
+      position: relative;
+      z-index: 10000; }
+      .dialog-box .species-info #divselect cite {
+        box-sizing: border-box;
+        width: 89.6%;
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        color: #4e4e4e;
+        cursor: pointer;
+        font-style: normal;
+        font-size: 18px;
+        background: url("../images/manageImg/xialajiantou.png") no-repeat center center;
+        background-position: right center; }
+      .dialog-box .species-info #divselect ul {
+        box-sizing: border-box;
+        width: 89.6%;
+        background-color: transparent;
+        position: absolute;
+        z-index: 20000;
+        margin-top: -1px;
+        font-size: 16px;
+        display: none; }
+        .dialog-box .species-info #divselect ul li {
+          height: 24px;
+          line-height: 24px; }
+          .dialog-box .species-info #divselect ul li a {
+            display: block;
+            height: 24px;
+            color: #333333;
+            text-decoration: none;
+            padding-right: 10px; }
+            .dialog-box .species-info #divselect ul li a:hover {
+              background: #CCC; }
+    .dialog-box .species-info .unique-num {
+      border: none;
+      background: #f3f2f2;
+      color: #969696; }
+  .dialog-box .subhead {
+    font: 22px/42px "Microsoft Yahei";
+    margin: 0;
+    color: #333; }
+  .dialog-box .intro textarea {
+    outline: none;
+    resize: none;
+    width: 90%;
+    height: 164px;
+    border: 1px solid #777;
+    box-sizing: border-box;
+    padding: 16px;
+    margin-top: 24px;
+    border-radius: 18px; }
+  .dialog-box .property {
+    width: 90%;
+    margin-top: 26px; }
+    .dialog-box .property .property-list {
+      margin-top: 24px;
+      box-sizing: border-box;
+      border-radius: 16px;
+      box-shadow: 0 5px 5px #d7f1e7,0 -5px 5px #d7f1e7,5px 0 5px #d7f1e7, -5px 0 5px #d7f1e7;
+      overflow: hidden; }
+      .dialog-box .property .property-list table {
+        margin: 0; }
+        .dialog-box .property .property-list table tr {
+          height: 74px; }
+          .dialog-box .property .property-list table tr td {
+            font-size: 22px;
+            vertical-align: middle;
+            text-indent: 60px; }
+            @media (max-width: 1366px) {
+              .dialog-box .property .property-list table tr td {
+                font-size: 18px; } }
+          .dialog-box .property .property-list table tr :nth-child(odd) {
+            color: #fff;
+            background: #79cfae; }
+          .dialog-box .property .property-list table tr :nth-child(even) {
+            position: relative;
+            color: #777; }
+            .dialog-box .property .property-list table tr :nth-child(even):after {
+              content: '';
+              display: inline-block;
+              position: absolute;
+              width: 26px;
+              height: 26px;
+              right: 30px;
+              background: url("../images/manageImg/shanchu.png") no-repeat center center; }
+    .dialog-box .property .add-line {
+      font: 22px/74px 'Microsoft Yahei';
+      color: #79b0cf;
+      margin: 0; }
+      .dialog-box .property .add-line span {
+        cursor: pointer; }
+  .dialog-box .thn {
+    margin-top: 7px; }
+    .dialog-box .thn .opa-pic {
+      margin-top: 26px; }
+      .dialog-box .thn .opa-pic .opa {
+        font: 22px/42px 'Microsoft Yahei';
+        box-sizing: border-box;
+        height: 250px;
+        padding: 26px 0 20px 30px;
+        display: inline-block;
+        position: absolute; }
+        .dialog-box .thn .opa-pic .opa .file {
+          position: absolute;
+          width: 40px;
+          z-index: 100;
+          overflow: hidden;
+          opacity: 0;
+          filter: alpha(opacity=0); }
+        .dialog-box .thn .opa-pic .opa .uploading {
+          position: absolute;
+          top: 26px;
+          background: none;
+          color: #79b0cf;
+          cursor: pointer; }
+        .dialog-box .thn .opa-pic .opa .del-pic {
+          position: absolute;
+          bottom: 20px;
+          display: block;
+          vertical-align: bottom;
+          width: 44px; }
+    .dialog-box .thn img {
+      width: 280px;
+      height: 250px;
+      border-radius: 8px; }
+  .dialog-box .pic-show {
+    margin-top: 26px; }
+    .dialog-box .pic-show .pic-list {
+      display: inline-block;
+      margin: 28px 40px 0 0; }
+      .dialog-box .pic-show .pic-list img {
+        width: 280px;
+        height: 250px;
+        border-radius: 8px; }
+      .dialog-box .pic-show .pic-list .opa {
+        font: 22px/72px "Microsoft Yahei";
+        position: relative; }
+        .dialog-box .pic-show .pic-list .opa span {
+          cursor: pointer; }
+        .dialog-box .pic-show .pic-list .opa .file {
+          position: absolute;
+          z-index: 100;
+          overflow: hidden;
+          opacity: 0;
+          filter: alpha(opacity=0); }
+        .dialog-box .pic-show .pic-list .opa .uploading {
+          position: relative;
+          background: none;
+          color: #79b0cf;
+          cursor: pointer; }
+        .dialog-box .pic-show .pic-list .opa .del-pic {
+          float: right; }
+    .dialog-box .pic-show .last {
+      width: 280px;
+      height: 250px;
+      position: relative;
+      top: -40px;
+      margin: 0;
+      border: 1px dashed #f3f2f2;
+      border-radius: 8px; }
+      .dialog-box .pic-show .last img {
+        border: none; }
+      .dialog-box .pic-show .last .opa {
+        position: absolute;
+        top: 90px;
+        left: 104px; }
+        .dialog-box .pic-show .last .opa .add-pic {
+          width: 75px;
+          height: 75px;
+          display: block;
+          background: url("../images/manageImg/add.png") no-repeat center center; }
+        .dialog-box .pic-show .last .opa .file {
+          position: absolute;
+          top: 10px; }
+  .dialog-box .save-btn {
+    width: 308px;
+    height: 54px;
+    margin: 124px auto;
+    color: #fff;
+    font: 22px/54px 'Microsoft Yahei';
+    text-align: center;
+    border-radius: 16px;
+    background: #79cfae;
+    cursor: pointer; }

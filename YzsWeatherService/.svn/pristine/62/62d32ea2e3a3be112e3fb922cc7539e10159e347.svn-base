@@ -1,0 +1,153 @@
+/*撰写*/
+.s-top{
+	margin: 10px auto;
+	width: 98%;
+	padding: 10px 27px;
+	box-sizing: border-box;
+	border: solid 1px #ccc;
+	border-radius: 10px;
+	box-shadow: 0px 0px 1px 1px rgba(126, 125, 125, 0.65);
+}
+.category{
+	float: left;
+	/*font-size: 16px;*/
+}
+.category span{
+	display: inline-block;
+	padding: 4px 10px;
+	cursor: pointer;
+}
+.category span:hover,
+.category .lb-active{
+	background: #00b7ee;
+	color: #fff;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 14px;
+}
+.add-btn{
+	float: right;
+	width: 45px;
+	height: 45px;
+	margin-top: 30px;
+	background: url("../img/add.png") no-repeat center center;
+	cursor: pointer;
+}
+.s-list{
+	width: 100%;
+	padding: 20px 27px 0;
+	box-sizing: border-box;
+}
+.s-table{
+	width: 100%;
+	max-width: 100%;
+}
+.s-table thead{
+	height: 50px;
+	font-size: 18px;
+	line-height: 50px;
+	color: #2c2c2c;
+	background: #a9d2ca;
+}
+.s-table tbody tr td,
+.s-table thead tr td{
+	text-align: center;
+}
+.s-table tbody tr{
+	height: 50px;
+	font-size: 16px;
+}
+.s-table tbody tr:nth-child(odd){
+	background: #f7fbfa;
+}
+.s-table tbody tr:nth-child(even){
+	background: #e1efed;
+}
+.s-table span{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	margin: 0 5px;
+	background-size: cover;
+}
+.send-btn{
+	background: url("../img/send.png") no-repeat center center;
+}
+.del-btn{
+	background: url("../img/del.png") no-repeat center center;
+}
+/*撰写   新增*/
+.s-add-top{
+	position: relative;
+	left: 0;
+	top: 0;
+	margin: 10px auto;
+	width: 98%;
+	padding: 10px 27px;
+	box-sizing: border-box;
+}
+.tittle-content{
+	/*float: left;*/
+	margin: 0 auto;
+	width: 630px;
+	height:55px;
+}
+.tittle-text{
+	width: 508px;
+	height: 48px;
+	font-size: 18px;
+	line-height: 46px;
+	text-indent: 1em;
+	background-color: #f2f2f2;
+	box-shadow: inset 1px 2px 2px 0px
+	rgba(139, 183, 174, 0.6);
+	border-radius: 10px;
+}
+.tittle-btn{
+	display: inline-block;
+	padding: 0 20px;
+	margin-left: 10px;
+	/*width: 70px;*/
+	height: 46px;
+	font-size: 18px;
+	line-height: 46px;
+	color: #fff;
+	background-color: #3b98ef;
+	border-radius: 8px;
+	vertical-align: middle;
+}
+.return-btn{
+	position: absolute;
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	top: 20px;
+	right: 0;
+	background: url("../img/return.png") no-repeat center center;
+	background-size: cover;
+}
+.s-textarea-content{
+	width: 100%;
+	height: 500px;
+	padding: 20px 27px 0;
+	box-sizing: border-box;
+}
+.btn-content{
+	margin-top: 10px;
+	text-align: right;
+}
+
+.btn-content button{
+	display: inline-block;
+	padding: 0 20px;
+	margin: 10px;
+	height: 46px;
+	font-size: 18px;
+	line-height: 46px;
+	color: #fff;
+	background-color: #3b98ef;
+	border-radius: 8px;
+	vertical-align: middle;
+	cursor: pointer;
+}

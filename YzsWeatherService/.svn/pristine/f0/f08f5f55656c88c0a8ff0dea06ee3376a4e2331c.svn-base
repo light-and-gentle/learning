@@ -1,0 +1,5 @@
+var base="http://39.104.56.35:12001/";
+//var base="http://localhost:12001/";
+	var usertype="";
+//忻州项目自己的接口位置
+var realPath="http://39.104.56.35:12001/";

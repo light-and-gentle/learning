@@ -1,0 +1,118 @@
+/**{padding: 0;margin: 0;font-family:'YouYuane591695c21aa3c';color: #fff;  text-align: center;}*/
+*{color: #fff;text-align: center;}
+b{font-weight: normal;}
+
+.body_bg{
+	width: 100%;
+	background: url(../image/bg1.png) no-repeat;
+	background-size: calc(780 * 0.025rem) calc(1400 * 0.025rem);
+	position: relative;
+}
+.container{
+	width: 95%;
+	margin: 0 auto;
+	position: relative;
+	height: auto;
+	border-radius: 15px;
+	top: calc(230 * 0.025rem);
+	background: rgba(255,255,255,.3);
+}
+.bg_top{
+	width: 100%;
+	height: calc(820 * 0.025rem);
+	background: url(../image/bg2.png) no-repeat;
+	background-size: 100%;
+}
+.head_line{
+	width: 93%;
+	margin: 0 auto;
+	height: calc(75 * 0.025rem);
+	line-height: calc(75 * 0.025rem);
+}
+.head_line .title_left{
+	float: left;
+	font-size: calc(32 * 0.025rem);
+}
+
+.head_line .title_right{
+	float: right;
+	font-size: calc(24 * 0.025rem);
+}
+
+.detail_future_grid .tree p {
+	width: 7px;
+	font-size: 0;
+	display: block;
+	background: #99FFFF;
+	position: absolute;
+	border-radius: 10px;
+	left: 45%;
+	top: 0;
+	bottom: 0;
+}
+
+.cl, .clearfix {
+	zoom: 1;
+	position: relative;
+	margin-top:  calc(220*0.025rem);
+}
+
+.detail_future_grid .tree {
+	width: 69%;
+	height: 90px;
+	position: relative;
+	margin: calc(14*0.025rem); calc(0*0.025rem);
+}
+
+.detail_future_grid .clearfix li {
+	width: 14%;
+	height: auto;
+	padding: 9px 0 0;
+	float: left;
+	margin-bottom: 15px;
+}
+
+
+.detail_future_grid .weai {
+	width: 100%;
+	height:calc(60*0.025rem);
+	display: block;
+	text-align: center;
+}
+
+.weai img{
+	width: calc(42*0.025rem);
+	height:calc(42*0.025rem);
+}
+.container_weather{
+	margin-top:  calc(140*0.025rem);
+}
+.container_weather ul li{
+	float: left;
+	margin: calc(0*0.025rem) calc(20*0.025rem);
+}
+
+.container_weather ul li img{
+	width: calc(60*0.025rem);
+}
+
+.container_surface  ul li {
+	float: left;
+}
+
+.container_surface ul li img{
+	width: calc(40*0.025rem);
+}
+
+.tem{
+	font-size: calc(97 * 0.025rem);
+	margin-left:  calc(120 * 0.025rem);
+}
+
+#location img{
+	width: calc(52*0.025rem);
+}
+
+.container_data{
+	margin: calc(0*0.025rem) calc(20*0.025rem);
+}

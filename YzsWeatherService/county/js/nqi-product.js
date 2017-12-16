@@ -1,0 +1,34 @@
+/**
+ * Created by mt on 2017-12-8.
+ */
+$(function () {
+  $('.classify-list-content').on('click','li',function () {
+    var recipient = $(this).data('whatever');
+    $(this).addClass('classify-active').siblings().removeClass('classify-active');
+    $('.current-classify').text(recipient)
+
+  })
+  //  时间控件
+  var time = {
+    skinCell: 'jedategreen',
+    isinitVal:true,
+    initDate:[{hh:10,mm:00,ss:00},true],
+    format: 'YYYY-MM-DD hh:mm:ss',
+    minDate: '1900-01-01 00:00:00', //设定最小日期
+    maxDate: '2099-06-16 23:59:59', //最大日期
+    choosefun: function(elem,datas){
+      console.log(elem,datas,elem.val());
+
+    }
+  };
+  //时间控件调用
+  $("#time").jeDate(time);
+  
+  $('.vertical-time-line-content').on('click',function () {
+    console.log(123)
+    var imgSrc = $(this).data('src');
+    console.log(imgSrc)
+    $('.img-content img').attr('src',imgSrc)
+  });
+
+});

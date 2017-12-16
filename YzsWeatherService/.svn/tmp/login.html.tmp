@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1" />
+		<link href='http://cdn.webfont.youziku.com/webfonts/nomal/109116/46662/5a09309af629d80d3829ba3b.css' rel='stylesheet' type='text/css' />
+		<link type="text/css" rel="stylesheet" href="css/login.css" />
+		<link type="text/css" rel="stylesheet" href="../css/swiper.min.css" />
+		<title>忻州市农业气象综合服务平台</title>
+	</head>
+	<body>
+		<div class="htmleaf-container">
+			<div class="htmleaf-header">
+				<div class="header">
+					<div class="logo">
+						<a href="login.html"><img src="images/logo.png" /></a>
+					</div>
+					<div class="nav">
+						<ul>
+							<li>
+								<a target="_blank" href="http://xz.fw121.net/">
+									<img src="images/send.png" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="page-min-width">
+			<div class="el-row">
+        		<ul>
+        			<li id="rowList-1" class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5d">
+        				<a class="hi-icon hi-icon-mobile" href=""></a>
+        				<p>天气预报</p>
+        			</li>
+        			<li id="rowList-2" class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5d">
+<<<<<<< .mine
+        				<a class="hi-icon hi-icon-mobile" href="../county/zx-main.html?type=1"></a>
+=======
+        				<a class="hi-icon hi-icon-mobile" href="../county/qx-weather.html?type=1"></a>
+>>>>>>> .r6719
+        				<p>农情动态</p>
+        			</li>
+        			<li id="rowList-3" class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5d">
+        				<a class="hi-icon hi-icon-mobile" href="../county/zx-main.html?type=2"></a>
+        				<p>农气服务</p>
+        			</li>
+        			<li id="rowList-4" class="hi-icon-wrap hi-icon-effect-5 hi-icon-effect-5d">
+        				<a class="hi-icon hi-icon-mobile" href="../county/zx-main.html?type=3"></a>
+        				<p>区县农气</p>
+        			</li>
+        		</ul>
+        	</div>
+			<div class="swiper-container">
+			    <div class="swiper-wrapper">
+			        <div class="swiper-slide"><img src="images/banner01.jpg" /></div>
+			        <div class="swiper-slide"><img src="images/banner02.jpg" /></div>
+			        <div class="swiper-slide"><img src="images/banner03.jpg" /></div>
+			    </div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../js/jquery-2.1.1.min.js" ></script>
+	<script type="text/javascript" src="../js/swiper.min.js" ></script>
+	<script>        
+		var mySwiper = new Swiper ('.swiper-container', {
+		    direction: 'horizontal',
+		    loop: true,
+		    autoplay: 3000,
+		    paginationClickable :true,
+		});
+    </script>
+</html>

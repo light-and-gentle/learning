@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市气象服务产品制作系统</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/simplePagination.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/material-producing.css">
+</head>
+<body>
+<div class="s-top clearfix">
+  <div class="category ">
+    <!--<em>类&nbsp;别：</em>-->
+    <span class="lb-active" data-type=null  onclick="findDisaster('',0)">全&nbsp;部</span>
+    <p>
+      <em>灾情类型：</em>
+      <span data-type="0" onclick="findDisaster(0,0)">洪&nbsp;涝</span>
+      <span data-type="1" onclick="findDisaster(1,0)">干&nbsp;旱</span>
+      <span data-type="2" onclick="findDisaster(2,0)">冻&nbsp;害</span>
+      <span data-type="3" onclick="findDisaster(3,0)">倒&nbsp;伏</span>
+      <span data-type="4" onclick="findDisaster(4,0)">病虫害</span>
+    </p>
+  </div>
+</div>
+<div class="s-list">
+  <table cellspacing="0" class="s-table">
+    <thead>
+    <tr>
+      <td>标题</td>
+      <td>创建时间</td>
+      <td>状态 </td>
+      <td>类别</td>
+      <td>操作</td>
+    </tr>
+    </thead>
+    <tbody id="content">
+     
+    </tbody>
+  </table>
+
+  <!--详情弹框-->
+  <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+          <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <div class="show-img">
+            <img src="" id="disImg" style="width: 500px;height: 300px;">
+          </div>
+          <p id="describe"> </p>
+          <p id="username"> </p>
+          <p id="address"> </p>
+        </div>
+        <div class="modal-footer" id="handle">
+         <!--  <button type="button" class="btn btn-primary btn-sure">通过</button>
+          <button type="button" class="btn btn-default btn-danger" data-dismiss="modal">不通过</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/jquery.simplePagination.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="js/zz-main.js"></script>
+<script src="js/material-producting.js"></script>
+<script src="js/check.js"></script>
+<script>
+//  模态框
+  $('#detailsModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget); // 触发事件的按钮
+    var recipient = button.data('whatever');  // 解析出data-whatever内容
+    var modal = $(this);
+    modal.find('.modal-title').text( recipient)
+  })
+
+$('.btn-sure').on('click',function () {
+  $('#detailsModal').modal('hide')
+})
+</script>
+</body>
+</html>

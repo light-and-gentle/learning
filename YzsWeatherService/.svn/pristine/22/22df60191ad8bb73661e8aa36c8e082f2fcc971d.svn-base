@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市农业气象综合服务平台</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/swiper.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/agricultural-condition.css">
+</head>
+<body onload="setIframe()">
+  <!--<div class="main-content">-->
+    <div class="content-top clearfix">
+      <div class="select-area">
+        <div class="qx">
+          <span class="current-area">区县选择</span>
+          <i class="qx-icon triangle-down"></i>
+        </div>
+        <div class="area-content">
+          <ol>
+            <li class="area-active">保德县</li>
+            <li>定襄县</li>
+            <li>代县</li>
+            <li>繁峙县</li>
+            <li>河曲县</li>
+            <li>静乐县</li>
+            <li>岢岚县</li>
+            <li>宁武县</li>
+            <li>偏关县</li>
+            <li>神池县</li>
+            <li>五台县</li>
+            <li>五寨县</li>
+            <li>原平市</li>
+          </ol>
+        </div>
+      </div>
+      <div class="zd-content">
+        <div class="arrow arrow-l"></div>
+        <div class="zd-name-content">
+          <ul class="zd-name">
+            <li data-sid='53660' class='zd-active'>保德</li>
+          </ul>
+        </div>
+        <div class="arrow arrow-r"></div>
+      </div>
+
+    </div>
+    <div class="sub-content">
+      <div class="content product-content clearfix">
+        <div class="content-l bt">
+          <div class="title-content">
+            <h2 class="sub-title fl">农业概况</h2>
+          </div>
+          <div class="info-content bs">
+            <div class="detail-content feature clearfix">
+              <div class="feature-text fl">
+                <h2 class="nq-cp-title">区县特色</h2>
+                <div class="detail-info">
+                  定襄县是山西省忻州市所辖，位于山西省北中部。三面群山环抱，境内四水贯流。全县地形由东向西呈簸箕形。北面以将军山五台山余脉与原平市、五台县毗邻，东南以文山、系舟山与盂县、阳曲县接壤，西与忻府区相邻。定襄县东西长48公里，南北宽36公里，总面积865平方公里。定襄县总人口约217468人。定襄县政府驻城关镇。忻州至河边的支线铁路、忻州至阜平的干线公路横穿全境。	定襄地处忻定盆地，土地肥沃，气候温和，是忻州市粮食主产区。
+                  定襄县历史悠久，拥有属龙山文化的西社、横山、白村等新石器时代遗址，县城西、南残垣断壁，为西汉阳曲古城遗迹。
+                  2012年，定襄县生产总值完成41.4亿元，全社会固定资产投资完成22.5亿元。
+                </div>
+              </div>
+              <div class="feature-img fr">
+                <img src="img/qxcp.png" alt="">
+              </div>
+            </div>
+            <div class="detail-content">
+              <h2 class="nq-cp-title">农业发展现状</h2>
+              <div class="detail-info">
+                2012年定襄建设24个万亩玉米丰产方片，定襄县粮食总产量达到3.3亿斤。定襄县瓜菜总收入达到2亿元。受禄乡千亩设施农业园区的温室大棚亩均收入达到2.8万元，带动当地人均增收2640元。建成各类规模养殖场8个。2012年定襄实施了4.5万平方米、1000人的移民扶贫小区建设工程，对1.2万个农村劳动力进行了就业培训。
+              </div>
+            </div>
+            <div class="detail-content">
+              <h2 class="nq-cp-title">未来发展目标</h2>
+              <div class="detail-info">
+                “一创三强五推动”工作主线:一创是引深创卫成效;三强是强化项目引领，强化产业支撑，强化基础设施建设;五推动是推动民生改善，推动社保扩面提质，推动社会事业发展，推动安全稳定工作，推动作风转变。
+              </div>
+            </div>
+            <div class="detail-content">
+              <h2 class="nq-cp-title">地理位置</h2>
+              <div class="detail-info">
+                <div class="area-map-content"></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="content-r">
+          <div class="device-state bt">
+            <div class="title-content">
+              <h2 class="sub-title">种养殖分布图</h2>
+            </div>
+            <div class="yz-distribution">
+              <img src="img/fbt.png" alt="">
+            </div>
+            <div class="check-btn bs">
+              <span>详情</span>
+            </div>
+          </div>
+          <div class="live-monitoring bt mt18">
+            <div class="title-content">
+              <h2 class="sub-title">农产品价格</h2>
+            </div>
+            <div class="price-content bs">
+              <table cellspacing="0" cellpadding="0" class="price-table">
+                <thead>
+                <tr>
+                  <th>序号</th>
+                  <th>品种</th>
+                  <th>价格（元/斤）</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>南瓜</td>
+                  <td>1.5</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>白菜</td>
+                  <td>0.4</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>辣椒</td>
+                  <td>1</td>
+                </tr>
+                </tbody>
+              </table>
+            </div>
+
+          </div>
+          <div class="site-appearance bt mt18">
+            <div class="title-content">
+              <h2 class="sub-title">农业气候区划</h2>
+            </div>
+            <div class="qh-distribution bs">
+              <img src="img/qiht.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--</div>-->
+  <div class="zhezhao"></div>
+  <div class="tanchu">
+    <div class="close">
+      <img src="img/guanbi.png" alt="">
+    </div>
+    <div class="img-show-content">
+      <img src="img/fbt.png" alt="">
+    </div>
+  </div>
+
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="../js/main.js"></script>
+<script src="js/qx-microclimate.js"></script>
+<script>
+$('.check-btn').on('click',function () {
+  $('.zhezhao').fadeIn().delay('2000').fadeOut()
+  $('.tanchu').fadeIn().delay('2000').fadeOut()
+})
+</script>
+</body>
+</html>

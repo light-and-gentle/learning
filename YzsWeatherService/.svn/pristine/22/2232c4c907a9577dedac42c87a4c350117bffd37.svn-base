@@ -1,0 +1,87 @@
+/**
+ * Created by mt on 2017-11-29.
+ */
+var currentSid="";
+$(function () {
+  // 基于准备好的dom，初始化echarts实例
+  // var myChart = echarts.init(document.getElementById('chart-container'));
+  $('.select-area').on('click', '.qx', function () {
+    var $box = $(".select-area .area-content");
+    if ($box.is(':visible'))
+      $(".qx-icon").removeClass('triangle-up').addClass('triangle-down');
+    else
+      $(".qx-icon").removeClass('triangle-down').addClass('triangle-up');
+    $box.toggle(500);
+  });
+
+  //小气候站点击默认
+  $('.zd-name').on('click', 'li', function () {
+    $(this).addClass("zd-active").siblings().removeClass("zd-active");
+    var clickSid = $(this).attr("data-sid");//渲染页面时设置自定义属性
+    if (currentSid != clickSid) {
+      currentSid = clickSid;
+      zdClick();
+    }
+  });
+  //小气候站点击滚动
+  //每次移动(px)
+  var Space = 15;
+  if ($('.zd-name li').length > 5) $(".arrow").show();
+  $(".arrow-l").on('click', function () {
+    var $box = $(".zd-name");
+    $box.css('left', '-=' + Space);
+    var s = Math.abs(parseInt($box.css("left"))) - Space - 40;
+    if (s >= $(".zd-name li:nth-child(1)").width()) {
+      $box.find("li").slice(0, 1).appendTo($box);
+
+    }
+  });
+  //向右滚动
+  $(".arrow-r").on('click', function () {
+    var $box = $(".zd-name");
+    $box.css('margin-left', '+=' + Space);
+    var s = Math.abs(parseInt($box.css("margin-left"))) - Space - 30;
+    if (s >= $(".zd-name li:last-child").width()) {
+      $box.find("li").slice(-1).prependTo($box);
+    }
+  });
+  $('.area-content').on('click', 'li', function () {
+    $('.area-content ol li').removeClass("area-active");
+    $(this).addClass("area-active");
+    var textVal = $(this).text();
+    $(".qx-icon").removeClass('triangle-up').addClass('triangle-down');
+    $(".select-area .current-area").text(textVal);
+    $(".select-area .area-content").hide(500);
+    //根据所选区，读取小气候站点
+    iniStation(textVal);
+  });
+  function iniStation() {
+    
+  }
+
+
+
+  var mySwiper = new Swiper('.swiper-container', {
+    direction: 'horizontal',
+    loop: true,
+    autoplay: 3000,//自动轮播
+    speed: 600,
+    // 如果需要分页器
+    pagination: '.swiper-pagination',
+    paginationClickable:true,
+    paginationType: 'custom',//这里分页器类型必须设置为custom,即采用用户自定义配置
+    //下面方法可以生成我们自定义的分页器到页面上
+    paginationCustomRender: function(swiper, current, total) {
+      var customPaginationHtml = "";
+      for(var i = 0; i < total; i++) {
+        //判断哪个分页器此刻应该被激活
+        if(i == (current - 1)) {
+          customPaginationHtml += '<span class="swiper-pagination-customs swiper-pagination-customs-active"></span>';
+        } else {
+          customPaginationHtml += '<span class="swiper-pagination-customs"></span>';
+        }
+      }
+      return customPaginationHtml;
+    }
+  });
+})

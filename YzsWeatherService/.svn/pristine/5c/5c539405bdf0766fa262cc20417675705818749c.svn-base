@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta charset="UTF-8">
+  <title>忻州市农业气象综合服务平台</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/simplePagination.css">
+  <link rel="stylesheet" href="css/agroclimate.css">
+    <link href="jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet">
+</head>
+<body onload="setIframe()">
+<div class="info-content">
+  <div class="info-classify">
+    <div class="classify-list">
+      <ul class="classify-list-content ywcp clearfix">
+        <li class="classify-active tqyb" data-whatever="天气预报" data-type="5"></li>
+        <li class="nytq" data-whatever="农用天气预报" data-type="6"></li>
+        <li class="qlcl" data-whatever="秋粮产量预报" data-type="7"></li>
+        <li class="dqqh" data-whatever="短期气候预测" data-type="8"></li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="info-list mt18">
+    <div class=" title-content info-title-content clearfix">
+      <div class="info-title nq-title fs16 fl">
+        <i class="icon icon-h"></i>
+        <span>农气</span>
+        <i class="icon icon-j"></i>
+        <span>农气预报</span>
+        <i class="icon icon-j"></i>
+        <span class="current-classify">天气预报</span>
+      </div>
+      <div class="search-content fr clearfix">
+        <input type="text" class="search-t fs14 lh32 pl10" placeholder="请输入关键字" onfocus="this.placeholder=''" onblur="this.placeholder='请输入关键字'">
+        <input type="button" class="search-btn fs18" value="">
+      </div>
+    </div>
+    <div class="clearfix">
+      <div id="docDiv" style="overflow-y:hidden;width: 65%; float: left;">
+        <iframe style="width: 99%; height: 550px;" id="iframeWord"></iframe>
+      </div>
+      <ul class="info-doc-list">
+        <li>
+          <span title="忻州市2017年3月上旬农业气象旬报">忻州市2017年3月上旬农业气象旬报  </span>
+          <span class="time">2017-03-11</span>
+        </li>
+      </ul>
+    </div>
+
+
+    <!--分页-->
+    <div class="page-content">
+      <div class="pagination-holder clearfix">
+        <div id="light-pagination" class="pagination clearfix"></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script src="../js/jquery-2.1.1.min.js"></script>
+<script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+<script src="../js/jquery.simplePagination.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/main.js"></script>
+<script src="js/nqi-prediction.js"></script>
+</body>
+</html>

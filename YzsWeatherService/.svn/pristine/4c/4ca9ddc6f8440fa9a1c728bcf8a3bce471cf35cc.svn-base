@@ -1,0 +1,8 @@
+/**
+ * Created by mt on 2017-12-11.
+ */
+$(function () {
+  $('.category').on('click','span',function () {
+    $(this).addClass('lb-active').parents('.category').find('span').not($(this)).removeClass('lb-active')
+  })
+});

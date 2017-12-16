@@ -1,0 +1,45 @@
+var base = "localhost:20010";
+
+function gettemp(obj) {
+    console.log(obj);
+    $.ajax({
+        url:"http://"+base+"/smart/query-by-mac",
+        data:"mac="+obj+"&token=c372adf83d67bb21b8e7767e923ec0fc",
+        type:"post",
+        dataType:"JSON",
+        success:function(data){
+            //console.log(data);
+            var time=data.datatime.substr(11,5) ;
+            $(".time span").html(time + " 实况");
+            $(".zs.h em").html(data.rh+"%");
+            $(".zs.w span").html(getWinddirName(data.winddir));
+            $(".zs.w em").html(data.windspecd+"级");
+            $(".tem span").html(data.temp);
+            var temp = data.temp;
+            //console.log(temp);
+            var a = (temp) * 0.8 + 50*0.8;
+            //console.log(a);
+            $(".c").css("height",a+"px");
+        }
+    })
+}
+
+function getWinddirName(obj){
+    if (337.5<=obj || obj<=22.5){
+        return "北风"
+    }else if (22.5<obj<=67.5){
+        return "东北风"
+    }else if(67.5<obj<=112.5){
+        return "东风"
+    }else if(112.5<obj<=157.5){
+        return "东南风"
+    }else if(157.5<obj<=202.5){
+        return "南风"
+    }else if(202.5<obj<=247.5){
+        return "西南风"
+    }else if(247.5<obj<=292.5){
+        return "西风"
+    }else if(292.5<obj<=337.5){
+        return "西北风"
+    }
+}

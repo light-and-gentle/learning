@@ -1,0 +1,165 @@
+@charset "UTF-8";
+html, body {
+  width: 100%;
+  height: 100%; }
+
+.functional {
+  width: 100%;
+  height: 80px;
+  border-bottom: 1px solid #d3d3d4;
+  box-shadow: 0 -1px #e4e4e5;
+  position: relative;
+  background: url("../images/manageImg/logo.png") no-repeat center center;
+  background-position: 20px, 8px;
+  background-color: #fff; }
+  .functional .title {
+    position: relative;
+    display: inline-block;
+    margin-left: 301px;
+    font: bold 28px/72px '宋体'; }
+  .functional .fun-btn {
+    width: 272px;
+    float: right;
+    margin-top: 22px; }
+    .functional .fun-btn .icon {
+      display: inline-block;
+      width: 37px;
+      height: 38px;
+      margin-right: 40px; }
+    .functional .fun-btn .computer {
+      background: url("../images/manageImg/diannao.png") no-repeat center center; }
+    .functional .fun-btn .setting {
+      background: url("../images/manageImg/shezhi.png") no-repeat center center; }
+    .functional .fun-btn .switch {
+      background: url("../images/manageImg/guanbi.png") no-repeat center center; }
+  .functional .userinfo {
+    vertical-align: middle;
+    float: right;
+    margin-top: 13px; }
+    .functional .userinfo .avatar {
+      width: 54px;
+      height: 54px;
+      float: left;
+      margin-right: 42px;
+      border-radius: 50%; }
+      .functional .userinfo .avatar img {
+        width: 54px;
+        height: 54px;
+        border-radius: 50%;
+        background: #eee; }
+  .functional .login-info {
+    width: 254px; }
+    .functional .login-info .user {
+      margin-left: 25px;
+      font: 18px/36px "Microsoft Yahei"; }
+    .functional .login-info .data-time {
+      font: 14px/1 'Microsoft Yahei';
+      color: #b7b6b6; }
+
+.main {
+  width: 100%;
+  position: relative;
+  overflow: auto;
+  min-height: 100%;
+  margin-bottom: -82px;
+  background: #ececed; }
+  .main .sidebar {
+    position: absolute;
+    background: #33453e;
+    padding-top: 5px;
+    width: 250px;
+    top: 0;
+    left: 0;
+    bottom: 0; }
+    .main .sidebar .fold-icon {
+      position: absolute;
+      width: 20px;
+      height: 31px;
+      right: -20px;
+      top: 22px;
+      background: url("../images/manageImg/shouqi.png") no-repeat center center; }
+    .main .sidebar .side-title-wrapper {
+      height: 70px; }
+    .main .sidebar .side-title {
+      font: 22px/70px "Microsoft Yahei";
+      color: #79cfae;
+      text-align: center; }
+    .main .sidebar .side-info {
+      font-size: 0;
+      min-height: 48px; }
+      .main .sidebar .side-info h2 {
+        display: inline-block;
+        vertical-align: middle;
+        font: 20px/48px "Microsoft Yahei";
+        color: #6bb398; }
+      .main .sidebar .side-info .side-con {
+        display: none;
+        padding-top: 2px;
+        padding-left: 38px;
+        padding-right: 40px; }
+        .main .sidebar .side-info .side-con li {
+          font: 18px/66px "Microsoft Yahei"; }
+      .main .sidebar .side-info .side-icon {
+        display: inline-block;
+        vertical-align: middle;
+        width: 30px;
+        height: 48px;
+        margin-left: 38px;
+        margin-right: 16px; }
+      .main .sidebar .side-info .variety {
+        background: url("../images/manageImg/pinzhong.png") no-repeat center center; }
+      .main .sidebar .side-info .collect {
+        background: url("../images/manageImg/caijilu.png") no-repeat center center; }
+      .main .sidebar .side-info .img-info {
+        background: url("../images/manageImg/tuxiang.png") no-repeat center center; }
+      .main .sidebar .side-info .env {
+        background: url("../images/manageImg/huanjing.png") no-repeat center center; }
+      .main .sidebar .side-info .analyze {
+        background: url("../images/manageImg/zonghe.png") no-repeat center center; }
+      .main .sidebar .side-info .sys-setting {
+        background: url("../images/manageImg/xitong.png") no-repeat center center; }
+      .main .sidebar .side-info .dictionary {
+        background: url("../images/manageImg/shuju.png") no-repeat center center; }
+    .main .sidebar .active {
+      border-left: 2px solid #71c0a2;
+      color: #fff;
+      background: #14201b; }
+      .main .sidebar .active h2 {
+        color: inherit; }
+      .main .sidebar .active .side-con {
+        display: block;
+        background: #1c2722; }
+        .main .sidebar .active .side-con .current {
+          background: url("../images/manageImg/sanjiao.png") no-repeat center center;
+          background-position: 13px center; }
+        .main .sidebar .active .side-con li {
+          padding-left: 46px; }
+      .main .sidebar .active .variety {
+        background: url("../images/manageImg/pinzhongbai.png") no-repeat center center; }
+      .main .sidebar .active .collect {
+        background: url("../images/manageImg/caiji.png") no-repeat center center; }
+      .main .sidebar .active .img-info {
+        background: url("../images/manageImg/tuxiangbai.png") no-repeat center center; }
+      .main .sidebar .active .env {
+        background: url("../images/manageImg/huanjingbai.png") no-repeat center center; }
+      .main .sidebar .active .analyze {
+        background: url("../images/manageImg/zonghebai.png") no-repeat center center; }
+      .main .sidebar .active .sys-setting {
+        background: url("../images/manageImg/xitongbai.png") no-repeat center center; }
+      .main .sidebar .active .dictionary {
+        background: url("../images/manageImg/shujubai.png") no-repeat center center; }
+    .main .sidebar.folded {
+      width: 110px; }
+      .main .sidebar.folded .fold-icon {
+        background: url("../images/manageImg/zhankai.png") no-repeat center center; }
+      .main .sidebar.folded .side-title {
+        display: none; }
+      .main .sidebar.folded .side-tit {
+        display: none; }
+      .main .sidebar.folded .side-con {
+        display: none; }
+  .main .main-content {
+    padding: 0 24px 120px 300px;
+    background: #ececed; }
+    .main .main-content.folded-main {
+      padding: 0 24px 120px 160px; }

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>忻州市农业气象综合服务平台</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/swiper.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="css/county.css">
+</head>
+<body>
+
+  <!--<div class="main-content">-->
+    <div class="content-top clearfix">
+      <div class="select-area">
+        <div class="qx">
+          <span class="current-area">区县选择</span>
+          <i class="qx-icon triangle-down"></i>
+        </div>
+        <div class="area-content">
+          <ol>
+            <li class="area-active">保德县</li>
+            <li>定襄县</li>
+            <li>代县</li>
+            <li>繁峙县</li>
+            <li>河曲县</li>
+            <li>静乐县</li>
+            <li>岢岚县</li>
+            <li>宁武县</li>
+            <li>偏关县</li>
+            <li>神池县</li>
+            <li>五台县</li>
+            <li>五寨县</li>
+            <li>原平市</li>
+          </ol>
+        </div>
+      </div>
+      <div class="zd-content">
+        <div class="arrow arrow-l"></div>
+        <div class="zd-name-content">
+          <ul class="zd-name">
+            <li data-sid='53660'class='zd-active'>保德</li>
+          </ul>
+        </div>
+        <div class="arrow arrow-r"></div>
+      </div>
+
+    </div>
+    <div class="sub-content">
+      <div class="content microclimate-content clearfix">
+        <div class="content-l bt">
+          <div class="title-content clearfix">
+            <h2 class="sub-title fl">要素实况</h2>
+            <ul class="mark-content fr">
+              <li><i class="color-icon icon-228b22"></i><span>正常</span></li>
+              <li><i class="color-icon icon-48b"></i><span>偏低</span></li>
+              <li><i class="color-icon icon-ff4500"></i><span>偏高</span></li>
+            </ul>
+          </div>
+          <div class="panel-content bs">
+            <div class="panel">
+              <div class="meter" id="main1"></div>
+            </div>
+            <div class="panel">
+              <div class="meter" id="main2"></div>
+            </div>
+            <div class="panel">
+              <div class="meter" id="main3"></div>
+            </div>
+            <div class="panel">
+              <div class="meter" id="main4"></div>
+            </div>
+            <div class="panel">
+              <div class="meter" id="main5"></div>
+            </div>
+            <div class="panel">
+              <div class="meter" id="main6"></div>
+            </div>
+            <div class="panel">
+              <div class="meter" id="main7"></div>
+            </div>
+            <div class="panel">
+              <div class="meter" id="main8"></div>
+            </div>
+            <div class="panel">
+              <div class="meter" id="main9"></div>
+            </div>
+          </div>
+
+        </div>
+        <div class="content-r">
+          <div class="device-state bt">
+            <div class="title-content">
+              <h2 class="sub-title">设备状态</h2>
+            </div>
+            <div class="device-content bs">
+              <p class="device-name">传感器：<span>10040</span></p>
+              <p class="device-parameter">电压： <span>13.4V</span></p>
+              <p class="update-time">数据更新时间： <span>2017-11-16  14：:16</span></p>
+            </div>
+          </div>
+          <div class="live-monitoring bt mt18">
+            <div class="title-content">
+              <h2 class="sub-title">实景监控</h2>
+            </div>
+            <div class="live-content bs">
+              <video src=""></video>
+            </div>
+
+          </div>
+          <div class="site-appearance bt mt18">
+            <div class="title-content">
+              <h2 class="sub-title">站点外观</h2>
+            </div>
+            <div class="site-content bs swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="img/site1.png" /></div>
+                <div class="swiper-slide"><img src="img/site2.png" /></div>
+                <div class="swiper-slide"><img src="img/site3.png" /></div>
+                <div class="swiper-slide"><img src="img/site4.png" /></div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--</div>-->
+
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/swiper.min.js"></script>
+  <script src="../js/echarts.min.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="js/panel.js"></script>
+  <script src="js/qx-microclimate.js"></script>
+  <script SRC="js/qx-microclimate-req.js"></script>
+  <script type="text/javascript">
+    var a = $(".zd-active").data("sid");
+    getSurfaceData(a);
+  </script>
+</body>
+</html>
